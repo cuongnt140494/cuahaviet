@@ -1,0 +1,616 @@
+{
+    "categories": [
+        {
+            "id": "cat_cua_cuon",
+            "name": "Cửa Cuốn",
+            "slug": "cua-cuon",
+            "description": "Cửa cuốn nhôm, cửa cuốn công nghệ Đức, Úc cao cấp",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDwPyjYfxwyhNOg_KbI_kHt6m-3K5mtVBvzrni_9WiP6eGGg7TgNM9H3J7shOaVeScyFzosi20S_R3sOmQKscY-ALKDSLNdo5T4NXMSalaUIEdrtjcRLYRVdEHSNmyJJRj21vFO4o9kgF7i_dKhD2NbR2gOojQq_ILuCEvEuDdV5e8NlYUGgD25jS4y_2FXhji7T4EwZhIDzQgTG1D42K3-VaLMEIT653FZnxgNABu4b5ppZt-s8PqBkFPGJ4I2selfshxOfWxCM3Gv",
+            "icon": "garage",
+            "order": 1,
+            "isActive": true,
+            "metaTitle": "Cửa Cuốn Chất Lượng Cao - Cửa Hà Việt",
+            "metaDescription": "Chuyên cung cấp cửa cuốn nhôm cao cấp, bảo hành 10 năm. Giá từ 900.000đ/m²",
+            "warrantyPolicy": "Bảo hành motor và bộ điều khiển 24 tháng. Bảo hành nan cửa 60 tháng. Bảo hành bề mặt sơn tĩnh điện 10 năm. Bảo trì định kỳ miễn phí 1 năm đầu tiên.",
+            "parentCategoryId": null,
+            "relatedCategories": [],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "cat_cua_nhom",
+            "name": "Cửa Nhôm",
+            "slug": "cua-nhom",
+            "description": "Cửa nhôm Xingfa, Việt Pháp, JMA cách âm cách nhiệt",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDT_nUYIOVwo8F2u_oBYjavZad0cR9OHju9r-Ee8cuz7gOPd7HlmvlDYC32hk8jpN_8fCiu_5jkltSOCAD23wpiMoOMn1IrlZ7kA8sbt6YpHSO-Yd0Ue8t79yPwKM7C4dbwPReAOC0MeB6ydJPCaAxTXPjbJotg71gOydp6_XANX_Vs5sIxqJoQ2JbMPNFzvwXxyKxkvlEd8VHx4yoRUXqUcbnNi-dVLfmxlojKEB1dd6rV1V2SKWgRbk-HQSmGPNmdJcs-aIkbR3Ev",
+            "icon": "door_sliding",
+            "order": 2,
+            "isActive": true,
+            "metaTitle": "Cửa Nhôm Xingfa Cao Cấp - Cửa Hà Việt",
+            "metaDescription": "Cửa nhôm Xingfa chính hãng, cách âm cách nhiệt tốt nhất",
+            "warrantyPolicy": "Bảo hành khung nhôm 60 tháng. Bảo hành phụ kiện Kinlong 24 tháng. Bảo hành kính cường lực 12 tháng. Hỗ trợ kỹ thuật 24/7.",
+            "parentCategoryId": null,
+            "relatedCategories": [],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "cat_cua_go",
+            "name": "Cửa Gỗ Composite",
+            "slug": "cua-go-composite",
+            "description": "Cửa gỗ composite chống nước, chống mối mọt 100%",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrOEuu7SJ1CNYXr98si18j8bb5coRQveKFJ1bl0r8I5TQlEj6Riugp46HCD6Zodd5lYbSpmDJhgYi_ciWU2wCjmuXZPVAq3Bj4GPXMZ5hRsz00Py7XSblO5s6zotcVawo4QGAm5sDPce51MmMxPGj2Th8c9w0Pc4-PLpp5jWGOn6X3rIJrOf49wVVRzctBV5YfZNsY7o1Ill7U-si2iz7CQsGLfJp0RNtWMqqdeNLJvhb8paiTFZ6F-SZXH55NP7sr_9A8opJL9AWV",
+            "icon": "door_front",
+            "order": 3,
+            "isActive": true,
+            "metaTitle": "Cửa Gỗ Composite Cao Cấp - Cửa Hà Việt",
+            "metaDescription": "Cửa gỗ composite chống nước 100%, vân gỗ tự nhiên",
+            "warrantyPolicy": "Bảo hành cánh cửa 60 tháng. Bảo hành phụ kiện (bản lề, khóa, tay nắm) 24 tháng. Cam kết chống cong vênh, mối mọt trọn đời. Hỗ trợ kỹ thuật 24/7.",
+            "parentCategoryId": null,
+            "relatedCategories": [],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "cat_phu_kien",
+            "name": "Phụ Kiện",
+            "slug": "phu-kien",
+            "description": "Motor, remote, phụ kiện cho các loại cửa cuốn, cửa nhôm, cửa gỗ",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V",
+            "icon": "settings",
+            "order": 4,
+            "isActive": true,
+            "metaTitle": "Phụ Kiện Cửa Cuốn, Cửa Nhôm - Cửa Hà Việt",
+            "metaDescription": "Motor, remote, tay nắm, khóa, phụ kiện chính hãng cho các loại cửa",
+            "warrantyPolicy": "Bảo hành phụ kiện 12-24 tháng tùy loại sản phẩm. Đổi mới nếu lỗi trong 7 ngày đầu. Hỗ trợ kỹ thuật 24/7.",
+            "parentCategoryId": null,
+            "relatedCategories": [
+                "cat_cua_cuon",
+                "cat_cua_nhom",
+                "cat_cua_go"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "products": [
+        {
+            "id": "prod_001",
+            "name": "Cửa Cuốn Khe Thoáng Austdoor E50",
+            "slug": "cua-cuon-khe-thoang-austdoor-e50",
+            "description": "Cửa cuốn khe thoáng cao cấp Austdoor, motor siêu êm, bảo hành 10 năm",
+            "features": [
+                "Chế độ siêu êm",
+                "Bảo hành motor 10 năm",
+                "Chống ồn 90%",
+                "Điều khiển từ xa + App",
+                "Lưu điện tự động"
+            ],
+            "specifications": {
+                "Loại nan": "Nan khe thoáng",
+                "Chất liệu": "Nhôm cao cấp mạ kẽm",
+                "Độ dày nan": "0.5mm",
+                "Motor": "YH 240V Taiwan",
+                "Công suất": "500W",
+                "Điều khiển": "Remote + App điện thoại",
+                "Kích thước tối đa": "Rộng 8m x Cao 6m",
+                "Thời gian mở/đóng": "12-15 giây",
+                "Nguồn điện": "220V - 50Hz",
+                "Bảo hành motor": "24 tháng",
+                "Bảo hành nan": "60 tháng"
+            },
+            "priceFrom": 1200000,
+            "priceTo": 1500000,
+            "unit": "VNĐ/m²",
+            "images": [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCWZ2XzE2si-cxKlWjfDZtm3uuItFopkY4EMBLAUi0uTLta-BYuETswyfoD8tRl9RqeXgX77SgMnIb7mtWg7FXRdokoG3ixZRQOZ3iRVUXW5TyGUEpXLj5ilWmDDstTqV7YhCBD6uBEtTEmf02k6xhtfrJcwQm-BFT3MFbWRAiysrJMJ6iarUxsdWjIe4t6PfXg7Fih7SRg3wZOzXs6vhuteVFddm2eN86JyfSve4Xm8pTUdCrBSBeFKkAyF5bp3qrnjllE8i-dfEYi",
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuDwPyjYfxwyhNOg_KbI_kHt6m-3K5mtVBvzrni_9WiP6eGGg7TgNM9H3J7shOaVeScyFzosi20S_R3sOmQKscY-ALKDSLNdo5T4NXMSalaUIEdrtjcRLYRVdEHSNmyJJRj21vFO4o9kgF7i_dKhD2NbR2gOojQq_ILuCEvEuDdV5e8NlYUGgD25jS4y_2FXhji7T4EwZhIDzQgTG1D42K3-VaLMEIT653FZnxgNABu4b5ppZt-s8PqBkFPGJ4I2selfshxOfWxCM3Gv"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWZ2XzE2si-cxKlWjfDZtm3uuItFopkY4EMBLAUi0uTLta-BYuETswyfoD8tRl9RqeXgX77SgMnIb7mtWg7FXRdokoG3ixZRQOZ3iRVUXW5TyGUEpXLj5ilWmDDstTqV7YhCBD6uBEtTEmf02k6xhtfrJcwQm-BFT3MFbWRAiysrJMJ6iarUxsdWjIe4t6PfXg7Fih7SRg3wZOzXs6vhuteVFddm2eN86JyfSve4Xm8pTUdCrBSBeFKkAyF5bp3qrnjllE8i-dfEYi",
+            "videoUrl": "https://www.youtube.com/watch?v=xxxxx",
+            "categoryId": "cat_cua_cuon",
+            "isActive": true,
+            "isFeatured": true,
+            "viewCount": 150,
+            "metaTitle": "Cửa Cuốn Austdoor E50 - Giá Tốt Nhất Hà Nội",
+            "metaDescription": "Cửa cuốn khe thoáng Austdoor E50 cao cấp, motor siêu êm. Giá từ 1.2tr/m². Bảo hành 10 năm.",
+            "keywords": [
+                "cửa cuốn austdoor",
+                "cửa cuốn khe thoáng",
+                "cửa cuốn hà nội"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "prod_002",
+            "name": "Cửa Nhôm Xingfa Hệ 55",
+            "slug": "cua-nhom-xingfa-he-55",
+            "description": "Cửa nhôm Xingfa chính hãng, kính 2 lớp cách âm cách nhiệt",
+            "features": [
+                "Cách âm 42dB",
+                "Cách nhiệt tốt",
+                "Không oxy hóa",
+                "Bền đẹp 30+ năm",
+                "An toàn cho trẻ nhỏ"
+            ],
+            "specifications": {
+                "Hệ nhôm": "Xingfa hệ 55",
+                "Độ dày profile": "1.6mm",
+                "Loại kính": "2 lớp cách âm cách nhiệt 18mm",
+                "Màu sắc": "Trắng / Đen / Xám / Vân gỗ",
+                "Kiểu mở": "Mở quay / Mở trượt / Mở lật",
+                "Phụ kiện": "Kinlong cao cấp",
+                "Cách âm": "35-42 dB",
+                "Chống nước": "IP65",
+                "Bảo hành khung": "60 tháng",
+                "Bảo hành phụ kiện": "24 tháng"
+            },
+            "priceFrom": 1800000,
+            "priceTo": 2500000,
+            "unit": "VNĐ/m²",
+            "images": [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCZMrm7Wh4RLEJVGGZzQmhPo-q68aZxJZE-u9UhptrQDlkgrrF3kgPTXb141u1n7_EjBTSVxW0k7vFRCw1Vg1K5o_3oJbh9dC75yK_Knxai2lfoLaV6fatyHim2dfJQrXFDEnQcMcSw1yTPrmIgNcTxq54Lj3OXnZflKjhhAxPgxGpEcxgvfYQQRT1EicTxJ37z3cjBH0SJ9cb2P3TRM-uk-dCBlQlL7mXz9Xd0XN9UgKWLlLlTdizvCjpcB2nRVGOEHSdLhPqPa7ca",
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuAnJb5iDPQWXHaDoUkyKG9lqOtZeX2pfZbWU_C1eg7EJhhH6XdfTNtfHuLIeExPNggx3Nz4rYbDH9iA94Ng6xx1leSiai6CZOGb69IJNg-0KoRnV8j2vhbWU-ZtPGb_BPMtGWSpvJVaPZ0qyd3k4-7vczCTIoYgZCOUfnnrBSSQxK3Gd1j4rrOKQxa6YLi44UsWRT3Ir8Mu_nvPQtfY2iy79ghLyS4mYDUX3EeI-VROgWHsfcV1Msz-vw5KBG71j9vGTHYakhKmA0qM"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZMrm7Wh4RLEJVGGZzQmhPo-q68aZxJZE-u9UhptrQDlkgrrF3kgPTXb141u1n7_EjBTSVxW0k7vFRCw1Vg1K5o_3oJbh9dC75yK_Knxai2lfoLaV6fatyHim2dfJQrXFDEnQcMcSw1yTPrmIgNcTxq54Lj3OXnZflKjhhAxPgxGpEcxgvfYQQRT1EicTxJ37z3cjBH0SJ9cb2P3TRM-uk-dCBlQlL7mXz9Xd0XN9UgKWLlLlTdizvCjpcB2nRVGOEHSdLhPqPa7ca",
+            "videoUrl": null,
+            "categoryId": "cat_cua_nhom",
+            "isActive": true,
+            "isFeatured": true,
+            "viewCount": 200,
+            "metaTitle": "Cửa Nhôm Xingfa Hệ 55 Chính Hãng",
+            "metaDescription": "Cửa nhôm Xingfa hệ 55 cách âm cách nhiệt, bảo hành 5 năm. Giá từ 1.8tr/m²",
+            "keywords": [
+                "cửa nhôm xingfa",
+                "cửa nhôm cách âm",
+                "cửa nhôm hà đông"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "prod_003",
+            "name": "Cửa Gỗ Composite Modern",
+            "slug": "cua-go-composite-modern",
+            "description": "Cửa gỗ composite chống nước 100%, vân gỗ tự nhiên sang trọng",
+            "features": [
+                "Chống nước 100%",
+                "Chống mối mọt",
+                "Không cong vênh",
+                "Vân gỗ tự nhiên",
+                "Thân thiện môi trường"
+            ],
+            "specifications": {
+                "Chất liệu": "Gỗ nhựa Composite (WPC)",
+                "Vân gỗ": "Óc chó / Sồi / Xoan đào",
+                "Độ dày cánh": "40mm",
+                "Kích thước": "Rộng 800-900mm x Cao 2100mm",
+                "Khung bao": "Gỗ composite",
+                "Chống nước": "100%",
+                "Chống cháy": "Chống cháy lan",
+                "Phong cách": "Hiện đại / Minimalist",
+                "Phụ kiện": "Bản lề 3D / Khóa từ / Tay nắm inox",
+                "Bảo hành": "60 tháng"
+            },
+            "priceFrom": 3500000,
+            "priceTo": 5000000,
+            "unit": "VNĐ/bộ",
+            "images": [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuDNIQeLD0GbmfTWkBmTfrvPB9zwQuKyFtWZzeW2iQwxYyQce2dYpQZt8gZdWSpRbuNbtWhQz4a49KtYlpIWvNztvqQvvm6S7-mgr1FKsM4-xxLtI6DT3h8VL25nEaXvNNoxlcamnbhcEE70EGl_FqtcwBnQHPm0XuI-Qz2qyVyLtNhWyyu5wesnOz3-Jp3PmxBxQsyDkMUqD6PysbQCogVHqWJk6o77GPrjKhWRDOBjOrHWp2Ex1ZIC392Bvfpp2OPyuZFx-0iwwlBl",
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuD1LYOWqDgRuqx0Q5mKefvQBRnF0BA1UNuW-YY5Xapu_js-j86Xu5VM5TgFKW949OsDQ9aRi86A8vT1BCa5gdE4UGmW-_niofe_De-VXF8lbBixHPL_XMM1A8DuTq5xvfqQTSN2I02DcuHDYvHYG-Jrx8TX8aJN4SLcGmubei_vqYKG4XetWjAVOxdXCAkJO-93rDWfDKDYLExs62DHfEJ1bj44z3MG1MVR9FUyQrD_oIQeVbo3UjCYlaO58cO72g_Njf94IYvAVAOW"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDNIQeLD0GbmfTWkBmTfrvPB9zwQuKyFtWZzeW2iQwxYyQce2dYpQZt8gZdWSpRbuNbtWhQz4a49KtYlpIWvNztvqQvvm6S7-mgr1FKsM4-xxLtI6DT3h8VL25nEaXvNNoxlcamnbhcEE70EGl_FqtcwBnQHPm0XuI-Qz2qyVyLtNhWyyu5wesnOz3-Jp3PmxBxQsyDkMUqD6PysbQCogVHqWJk6o77GPrjKhWRDOBjOrHWp2Ex1ZIC392Bvfpp2OPyuZFx-0iwwlBl",
+            "videoUrl": null,
+            "categoryId": "cat_cua_go",
+            "isActive": true,
+            "isFeatured": true,
+            "viewCount": 120,
+            "metaTitle": "Cửa Gỗ Composite Modern - Chống Nước 100%",
+            "metaDescription": "Cửa gỗ composite cao cấp, chống nước chống mối mọt. Giá từ 3.5tr/bộ",
+            "keywords": [
+                "cửa gỗ composite",
+                "cửa gỗ chống nước",
+                "cửa gỗ hà nội"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "prod_004",
+            "name": "Motor Cửa Cuốn YH 600kg",
+            "slug": "motor-cua-cuon-yh-600kg",
+            "description": "Motor cửa cuốn YH chính hãng Đài Loan, tải trọng 600kg, siêu êm, bền bỉ",
+            "features": [
+                "Tải trọng 600kg",
+                "Siêu êm 45dB",
+                "Chống quá tải",
+                "Tự động dừng khi gặp vật cản",
+                "Tích hợp lưu điện"
+            ],
+            "specifications": {
+                "Thương hiệu": "YH Taiwan",
+                "Tải trọng": "600kg",
+                "Công suất": "500W",
+                "Nguồn điện": "220V - 50Hz",
+                "Độ ồn": "45dB",
+                "Bảo hành": "24 tháng"
+            },
+            "priceFrom": 3500000,
+            "priceTo": 4500000,
+            "unit": "VNĐ/bộ",
+            "images": [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V",
+            "videoUrl": null,
+            "categoryId": "cat_phu_kien",
+            "isActive": true,
+            "isFeatured": true,
+            "viewCount": 85,
+            "metaTitle": "Motor Cửa Cuốn YH 600kg - Cửa Hà Việt",
+            "metaDescription": "Motor cửa cuốn YH chính hãng Đài Loan, siêu êm, bảo hành 24 tháng",
+            "keywords": [
+                "motor cửa cuốn",
+                "motor yh",
+                "phụ kiện cửa cuốn"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "prod_005",
+            "name": "Bộ Điều Khiển Remote Cửa Cuốn",
+            "slug": "bo-dieu-khien-remote-cua-cuon",
+            "description": "Bộ điều khiển remote 4 kênh cho cửa cuốn, tầm xa 50m, mã hóa 433MHz",
+            "features": [
+                "4 kênh điều khiển",
+                "Tầm xa 50m",
+                "Mã hóa 433MHz",
+                "Pin CR2032 tiết kiệm",
+                "Kết nối App điện thoại"
+            ],
+            "specifications": {
+                "Tần số": "433MHz",
+                "Số kênh": "4 kênh",
+                "Tầm xa": "50m",
+                "Pin": "CR2032",
+                "Thương hiệu": "YH Taiwan",
+                "Bảo hành": "12 tháng"
+            },
+            "priceFrom": 250000,
+            "priceTo": 450000,
+            "unit": "VNĐ/bộ",
+            "images": [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V",
+            "videoUrl": null,
+            "categoryId": "cat_phu_kien",
+            "isActive": true,
+            "isFeatured": false,
+            "viewCount": 120,
+            "metaTitle": "Remote Điều Khiển Cửa Cuốn 4 Kênh",
+            "metaDescription": "Bộ điều khiển remote cửa cuốn 4 kênh, tầm xa 50m, bảo hành 12 tháng",
+            "keywords": [
+                "remote cửa cuốn",
+                "điều khiển cửa cuốn",
+                "phụ kiện cửa cuốn"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "prod_006",
+            "name": "Khóa Từ Thông Minh Cửa Gỗ",
+            "slug": "khoa-tu-thong-minh-cua-go",
+            "description": "Khóa từ thông minh cho cửa gỗ, mở bằng vân tay, mật mã, thẻ từ và chìa cơ",
+            "features": [
+                "Mở bằng vân tay",
+                "Mở bằng mật mã",
+                "Mở bằng thẻ từ",
+                "Mở bằng chìa cơ",
+                "Kết nối App điện thoại"
+            ],
+            "specifications": {
+                "Loại khóa": "Khóa điện tử",
+                "Mở khóa": "Vân tay / Mật mã / Thẻ từ / Chìa",
+                "Số vân tay": "100 vân",
+                "Pin": "4 pin AA",
+                "Thương hiệu": "Samsung",
+                "Bảo hành": "24 tháng"
+            },
+            "priceFrom": 4500000,
+            "priceTo": 8000000,
+            "unit": "VNĐ/bộ",
+            "images": [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCLeCJQfSrdhWdf_4mxRs9RBryGeu25z5bjg0hLO054rQ8rkuK17QjA83ayxKWUqc3KQ9lZRHP7ESm8ezFm7AQllUXOaEnOQ8WhXomKgAisltJsD2HpVP6Wodo4egxQ2pOcFqiKkHnMQQDyj3rYmgxrbFGNugunXsjLRpS3oxxXtaZx8xUQ1YdnoppKYGyDEBYhqQSKsN84AVygl39ueUEM5h_U3DHzESolyWLLDz-Iw7mfMaiHvoRty06QdmT34COmHAtlaFlF258V",
+            "videoUrl": null,
+            "categoryId": "cat_phu_kien",
+            "isActive": true,
+            "isFeatured": true,
+            "viewCount": 95,
+            "metaTitle": "Khóa Từ Thông Minh Samsung - Cửa Hà Việt",
+            "metaDescription": "Khóa từ thông minh Samsung, mở vân tay mật mã thẻ từ, bảo hành 24 tháng",
+            "keywords": [
+                "khóa từ thông minh",
+                "khóa vân tay",
+                "phụ kiện cửa gỗ"
+            ],
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "inquiries": [
+        {
+            "id": "inq_001",
+            "name": "Nguyễn Văn A",
+            "phone": "0912345678",
+            "email": "nguyenvana@gmail.com",
+            "address": "123 Nguyễn Trãi, Hà Đông, Hà Nội",
+            "productId": "prod_001",
+            "productName": "Cửa Cuốn Khe Thoáng Austdoor E50",
+            "message": "Tôi cần báo giá cửa cuốn cho nhà mới, kích thước 4x3m",
+            "area": "12",
+            "width": 4,
+            "height": 3,
+            "source": "website",
+            "status": "PENDING",
+            "notes": null,
+            "utmSource": "google",
+            "utmMedium": "cpc",
+            "utmCampaign": "cua_cuon_hanoi",
+            "landingPage": "/san-pham/cua-cuon-khe-thoang-austdoor-e50",
+            "createdAt": "2024-12-27T10:30:00.000Z",
+            "updatedAt": "2024-12-27T10:30:00.000Z"
+        }
+    ],
+    "projects": [
+        {
+            "id": "proj_001",
+            "title": "Biệt Thự Ciputra",
+            "slug": "biet-thu-ciputra",
+            "description": "Công trình lắp đặt cửa nhôm Xingfa và cửa gỗ composite cho biệt thự 3 tầng tại Ciputra",
+            "location": "Ciputra, Tây Hồ, Hà Nội",
+            "client": "Anh Minh",
+            "projectType": "Biệt thự",
+            "images": [
+                "/images/projects/ciputra-1.jpg",
+                "/images/projects/ciputra-2.jpg",
+                "/images/projects/ciputra-3.jpg"
+            ],
+            "thumbnail": "/images/projects/ciputra-1.jpg",
+            "area": "350m²",
+            "year": 2024,
+            "products": [
+                "prod_002",
+                "prod_003"
+            ],
+            "isFeatured": true,
+            "isPublished": true,
+            "viewCount": 89,
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "posts": [
+        {
+            "id": "post_001",
+            "title": "Hướng Dẫn Chọn Cửa Cuốn Phù Hợp Cho Nhà Phố",
+            "slug": "huong-dan-chon-cua-cuon-phu-hop-cho-nha-pho",
+            "excerpt": "Bài viết hướng dẫn chi tiết cách chọn loại cửa cuốn phù hợp với từng loại nhà phố",
+            "content": "<h2>1. Các loại cửa cuốn phổ biến</h2><p>Cửa cuốn có nhiều loại...</p>",
+            "thumbnail": "/images/posts/chon-cua-cuon.jpg",
+            "tags": [
+                "Hướng dẫn",
+                "Cửa cuốn",
+                "Nhà phố"
+            ],
+            "isPublished": true,
+            "isFeatured": true,
+            "viewCount": 320,
+            "publishedAt": "2024-12-25T00:00:00.000Z",
+            "createdAt": "2024-12-25T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "faqs": [
+        {
+            "id": "faq_001",
+            "question": "Giá cửa cuốn bao nhiêu tiền 1m²?",
+            "answer": "Giá cửa cuốn dao động từ 900.000 - 2.500.000 VNĐ/m² tùy thuộc vào loại nan, motor và thương hiệu. Liên hệ 0919086272 để được báo giá chi tiết.",
+            "categoryId": "cat_cua_cuon",
+            "order": 1,
+            "isActive": true,
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "faq_002",
+            "question": "Thời gian lắp đặt mất bao lâu?",
+            "answer": "Thời gian lắp đặt thường từ 1-3 ngày tùy thuộc vào số lượng và loại cửa. Đội ngũ kỹ thuật sẽ tư vấn cụ thể sau khi khảo sát.",
+            "categoryId": null,
+            "order": 2,
+            "isActive": true,
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "testimonials": [
+        {
+            "id": "test_001",
+            "customerName": "Nguyễn Văn Minh",
+            "location": "Hà Đông, Hà Nội",
+            "content": "Cửa đẹp, lắp đặt nhanh, đội ngũ rất chuyên nghiệp. Giá cả hợp lý, sẽ giới thiệu cho bạn bè.",
+            "rating": 5,
+            "avatar": "/images/avatars/customer-1.jpg",
+            "projectId": "proj_001",
+            "isApproved": true,
+            "isFeatured": true,
+            "createdAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "test_002",
+            "customerName": "Trần Thị Hương",
+            "location": "Thanh Xuân, Hà Nội",
+            "content": "Tôi rất hài lòng với dịch vụ của Cửa Hà Việt. Tư vấn nhiệt tình, giá cả cạnh tranh. Cửa nhôm Xingfa chất lượng tuyệt vời.",
+            "rating": 5,
+            "avatar": "/images/avatars/customer-2.jpg",
+            "projectId": null,
+            "isApproved": true,
+            "isFeatured": true,
+            "createdAt": "2024-12-25T00:00:00.000Z"
+        },
+        {
+            "id": "test_003",
+            "customerName": "Lê Văn Nam",
+            "location": "Long Biên, Hà Nội",
+            "content": "Đã lắp cửa cuốn được 2 năm, hoạt động rất tốt, không hề gặp vấn đề gì. Dịch vụ bảo hành nhanh chóng.",
+            "rating": 5,
+            "avatar": "/images/avatars/customer-3.jpg",
+            "projectId": null,
+            "isApproved": true,
+            "isFeatured": true,
+            "createdAt": "2024-12-20T00:00:00.000Z"
+        }
+    ],
+    "banners": [
+        {
+            "id": "banner_001",
+            "title": "Giảm 15% Cửa Cuốn Austdoor",
+            "subtitle": "Áp dụng đến hết 31/12/2024",
+            "image": "/images/banners/hero-1.jpg",
+            "link": "/san-pham?category=cua-cuon",
+            "position": "hero",
+            "order": 1,
+            "startDate": "2024-12-01T00:00:00.000Z",
+            "endDate": "2024-12-31T23:59:59.000Z",
+            "isActive": true,
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "banner_002",
+            "title": "Cửa Nhôm Xingfa Chính Hãng",
+            "subtitle": "Cách âm - Cách nhiệt - Bền đẹp",
+            "image": "/images/banners/hero-2.jpg",
+            "link": "/danh-muc/cua-nhom",
+            "position": "hero",
+            "order": 2,
+            "startDate": null,
+            "endDate": null,
+            "isActive": true,
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "banner_003",
+            "title": "Cửa Gỗ Composite Cao Cấp",
+            "subtitle": "Chống nước 100% - Vân gỗ tự nhiên",
+            "image": "/images/banners/hero-3.jpg",
+            "link": "/danh-muc/cua-go-composite",
+            "position": "hero",
+            "order": 3,
+            "startDate": null,
+            "endDate": null,
+            "isActive": true,
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "priceConfigs": [
+        {
+            "id": "price_cua_cuon",
+            "categorySlug": "cua-cuon",
+            "basePrice": 1200000,
+            "minWidth": 1,
+            "maxWidth": 8,
+            "minHeight": 1,
+            "maxHeight": 6,
+            "motorFactor": 1.2,
+            "premiumFactor": 1.3,
+            "isActive": true,
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "price_cua_nhom",
+            "categorySlug": "cua-nhom",
+            "basePrice": 1800000,
+            "minWidth": 0.5,
+            "maxWidth": 4,
+            "minHeight": 0.5,
+            "maxHeight": 3,
+            "motorFactor": 1,
+            "premiumFactor": 1.4,
+            "isActive": true,
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        },
+        {
+            "id": "price_cua_go",
+            "categorySlug": "cua-go-composite",
+            "basePrice": 3500000,
+            "minWidth": 0.7,
+            "maxWidth": 1.2,
+            "minHeight": 2,
+            "maxHeight": 2.4,
+            "motorFactor": 1,
+            "premiumFactor": 1.25,
+            "isActive": true,
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ],
+    "companyInfo": {
+        "id": "singleton",
+        "name": "Cửa Hà Việt",
+        "logo": "/images/logo.png",
+        "phone": "0919086272",
+        "email": "cuahaviet@gmail.com",
+        "address": "46 Vũ Văn Cẩn, Hà Đông, Hà Nội",
+        "latitude": 20.9596,
+        "longitude": 105.7856,
+        "facebook": "https://facebook.com/cuahaviet",
+        "zalo": "0919086272",
+        "messenger": "cuahaviet",
+        "youtube": null,
+        "openingHours": "8:00 - 18:00 (Thứ 2 - CN)",
+        "slogan": "Uy tín - Chất lượng - Giá tốt",
+        "usp": [
+            {
+                "icon": "award",
+                "title": "10+ Năm Kinh Nghiệm",
+                "description": "Đội ngũ chuyên nghiệp, tận tâm"
+            },
+            {
+                "icon": "shield-check",
+                "title": "Bảo Hành Chính Hãng",
+                "description": "Cam kết 2-5 năm tùy sản phẩm"
+            },
+            {
+                "icon": "wallet",
+                "title": "Giá Cạnh Tranh",
+                "description": "Báo giá minh bạch, không phát sinh"
+            },
+            {
+                "icon": "truck",
+                "title": "Lắp Đặt Miễn Phí",
+                "description": "Tận nơi trong nội thành Hà Nội"
+            }
+        ],
+        "googleAnalyticsId": null,
+        "facebookPixelId": null,
+        "updatedAt": "2024-12-27T00:00:00.000Z"
+    },
+    "admins": [
+        {
+            "id": "admin_001",
+            "email": "admin@cuahaviet.com",
+            "password": "$2b$10$xxxxx",
+            "name": "Admin",
+            "role": "SUPER_ADMIN",
+            "createdAt": "2024-12-27T00:00:00.000Z",
+            "updatedAt": "2024-12-27T00:00:00.000Z"
+        }
+    ]
+}
