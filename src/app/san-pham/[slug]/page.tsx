@@ -220,10 +220,18 @@ export default async function ProductDetailPage({ params }: Props) {
 
                                     {/* CTA Buttons for Doors */}
                                     <div className="flex flex-col gap-3">
+                                        {/* Primary: Auto Quote Calculator */}
+                                        <Link href="/tinh-gia">
+                                            <Button className="w-full h-14 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold rounded-xl transition-all transform hover:scale-[1.02] shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-3 text-lg">
+                                                <span className="material-symbols-outlined text-2xl">calculate</span>
+                                                Tự tính báo giá
+                                            </Button>
+                                        </Link>
+                                        {/* Secondary: Contact for Quote */}
                                         <Link href="/bao-gia">
-                                            <Button className="w-full h-14 bg-[#1b399d] hover:bg-[#132a75] text-white font-bold rounded-xl transition-all transform hover:scale-[1.02] shadow-lg shadow-[#1b399d]/20 flex items-center justify-center gap-3 text-lg">
-                                                <span className="material-symbols-outlined text-2xl">request_quote</span>
-                                                Yêu cầu báo giá
+                                            <Button variant="outline" className="w-full h-12 border-[#1b399d] text-[#1b399d] hover:bg-[#1b399d] hover:text-white font-bold rounded-xl flex items-center justify-center gap-2">
+                                                <span className="material-symbols-outlined text-xl">request_quote</span>
+                                                Yêu cầu báo giá chi tiết
                                             </Button>
                                         </Link>
                                         <div className="grid grid-cols-2 gap-3 mt-1">

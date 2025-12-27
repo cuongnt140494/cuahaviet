@@ -27,6 +27,26 @@ export interface ProductSpecifications {
     [key: string]: string | string[] | undefined;
 }
 
+export interface QuoteConfig {
+    // Shared
+    minArea?: number; // Diện tích tối thiểu để tính giá (m2)
+
+    // Rolling Door
+    weightPerM2?: number; // Trọng lượng nan (kg/m2) để tính motor
+    laborCostPerM2?: number; // Chi phí nhân công (VND/m2)
+
+    // Aluminum Door
+    aluminumSystem?: string; // 'xingfa55', 'xingfa93'
+
+    // Accessory (Motor)
+    capacityKG?: number; // Sức nâng (kg) của motor
+    forDoorType?: string; // Loại cửa phù hợp ('rolling', 'tam_lien')
+
+    // Accessory (UPS)
+    maxArea?: number; // Diện tích tối đa (legacy)
+    maxDoorArea?: number; // Diện tích cửa tối đa (m2) cho UPS
+}
+
 export interface Product {
     id: string;
     name: string;
@@ -34,6 +54,7 @@ export interface Product {
     description: string;
     features: string[];
     specifications: ProductSpecifications;
+    quoteConfig?: QuoteConfig;
     priceFrom: number;
     priceTo: number;
     unit: string;

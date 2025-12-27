@@ -15,8 +15,8 @@ import { cn } from '@/lib/utils';
 const navigation = [
     { name: 'Trang chủ', href: '/', icon: 'home' },
     { name: 'Sản phẩm', href: '/san-pham', icon: 'door_sliding' },
+    { name: 'Tính giá', href: '/tinh-gia', icon: 'calculate' },
     { name: 'Dự án', href: '/du-an', icon: 'work' },
-    { name: 'Tin tức', href: '/tin-tuc', icon: 'article' },
     { name: 'Liên hệ', href: '/lien-he', icon: 'contact_support' },
 ];
 
@@ -77,11 +77,11 @@ export function Header() {
                             />
                         </div>
 
-                        {/* CTA Button */}
-                        <Link href="/bao-gia">
-                            <Button className="bg-[#1b399d] hover:bg-[#132a75] text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-glow transition-all flex items-center gap-2">
-                                <span className="material-symbols-outlined text-[18px]">request_quote</span>
-                                <span className="hidden sm:inline">Báo giá ngay</span>
+                        {/* CTA Button - Auto Quote Calculator */}
+                        <Link href="/tinh-gia">
+                            <Button className="bg-gradient-to-r from-[#1b399d] to-[#2a4eb8] hover:from-[#132a75] hover:to-[#1b399d] text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-glow transition-all flex items-center gap-2">
+                                <span className="material-symbols-outlined text-[18px]">calculate</span>
+                                <span className="hidden sm:inline">Tự tính báo giá</span>
                             </Button>
                         </Link>
 
