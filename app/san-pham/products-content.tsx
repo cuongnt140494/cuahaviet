@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { products } from "@/data/products";
 import { categoryLabels, Category } from "@/types";
+import { searchMatch } from "@/lib/utils";
 import {
   Search,
   SlidersHorizontal,
@@ -44,16 +45,27 @@ const categoryIcons: Record<string, string> = {
 export function ProductsContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category") as Category | null;
+  const searchParam = searchParams.get("search") || "";
 
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(
     categoryParam
   );
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 15000000]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(searchParam);
   const [sortBy, setSortBy] = useState<"default" | "price-asc" | "price-desc">(
     "default"
   );
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+
+  // Sync search query with URL parameter
+  useEffect(() => {
+    setSearchQuery(searchParam);
+  }, [searchParam]);
+
+  // Sync category with URL parameter
+  useEffect(() => {
+    setSelectedCategory(categoryParam);
+  }, [categoryParam]);
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
@@ -67,11 +79,12 @@ export function ProductsContent() {
     );
 
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
       result = result.filter(
         (p) =>
-          p.name.toLowerCase().includes(query) ||
-          p.description.toLowerCase().includes(query)
+          searchMatch(p.name, searchQuery) ||
+          searchMatch(p.description, searchQuery) ||
+          searchMatch(categoryLabels[p.category], searchQuery) ||
+          searchMatch(p.specifications.model, searchQuery)
       );
     }
 

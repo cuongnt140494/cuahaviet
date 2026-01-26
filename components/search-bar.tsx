@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { products } from "@/data/products";
 import { categoryLabels } from "@/types";
+import { searchMatch } from "@/lib/utils";
 
 interface SearchBarProps {
   onClose?: () => void;
@@ -18,12 +19,12 @@ export function SearchBar({ onClose }: SearchBarProps) {
 
   useEffect(() => {
     if (query.trim().length >= 2) {
-      const searchQuery = query.toLowerCase();
       const filtered = products.filter(
         (p) =>
-          p.name.toLowerCase().includes(searchQuery) ||
-          p.description.toLowerCase().includes(searchQuery) ||
-          categoryLabels[p.category].toLowerCase().includes(searchQuery)
+          searchMatch(p.name, query) ||
+          searchMatch(p.description, query) ||
+          searchMatch(categoryLabels[p.category], query) ||
+          searchMatch(p.specifications.model, query)
       );
       setResults(filtered.slice(0, 5));
       setIsOpen(true);
