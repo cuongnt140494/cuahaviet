@@ -76,11 +76,11 @@ export function SearchBar({ onClose }: SearchBarProps) {
         </svg>
         <input
           type="search"
-          placeholder="Tìm kiếm cửa cuốn, motor, phụ kiện..."
+          placeholder="Tìm cửa cuốn, motor, phụ kiện..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.trim().length >= 2 && setIsOpen(true)}
-          className="w-full h-11 pl-11 pr-4 rounded-xl border-2 border-border bg-muted/30 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:bg-background transition-all"
+          className="w-full h-11 pl-11 pr-4 rounded-xl border-2 border-border bg-muted/30 text-base placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:bg-background transition-all"
         />
       </div>
 
