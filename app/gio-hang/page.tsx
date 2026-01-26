@@ -54,12 +54,12 @@ export default function CartPage() {
     <div className="min-h-screen bg-background">
       {/* Breadcrumb */}
       <div className="border-b bg-muted/30">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center gap-2 text-sm">
+        <div className="container mx-auto px-4 py-3 md:py-4">
+          <nav className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm" aria-label="Breadcrumb">
             <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
               Trang chủ
             </Link>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 text-muted-foreground" aria-hidden="true" />
             <span className="text-foreground font-medium">Giỏ hàng</span>
           </nav>
         </div>

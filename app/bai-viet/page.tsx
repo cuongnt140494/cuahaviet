@@ -61,9 +61,9 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="container mx-auto px-4 py-16 lg:py-20 relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
+          <nav className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm text-white/70 mb-6 md:mb-8" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">Trang chủ</Link>
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4" aria-hidden="true" />
             <span className="text-white">Bài viết</span>
           </nav>
           <div className="max-w-3xl">

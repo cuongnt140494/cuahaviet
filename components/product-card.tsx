@@ -161,22 +161,28 @@ export function ProductCard({ product }: ProductCardProps) {
             </p>
           </div>
 
+          {/* Mobile: Icon button, Desktop: Full button */}
           <Button
             size="sm"
             variant={inCart ? "secondary" : "default"}
             disabled={!product.inStock}
             onClick={handleAddToCart}
-            className="rounded-lg md:rounded-xl gap-1 md:gap-1.5 h-8 md:h-10 px-2 md:px-4 text-xs md:text-sm shrink-0"
+            className={`shrink-0 ${
+              inCart
+                ? "h-8 w-8 md:h-10 md:w-auto p-0 md:px-4 rounded-full md:rounded-xl"
+                : "h-8 w-8 md:h-10 md:w-auto p-0 md:px-4 rounded-full md:rounded-xl"
+            }`}
+            aria-label={inCart ? "Đã thêm vào giỏ hàng" : "Thêm vào giỏ hàng"}
           >
             {inCart ? (
               <>
-                <Check className="h-3.5 w-3.5 md:h-4 md:w-4" />
-                <span className="hidden sm:inline">Đã thêm</span>
+                <Check className="h-4 w-4" aria-hidden="true" />
+                <span className="hidden md:inline md:ml-1.5">Đã thêm</span>
               </>
             ) : (
               <>
-                <ShoppingCart className="h-3.5 w-3.5 md:h-4 md:w-4" />
-                <span className="hidden sm:inline">Thêm</span>
+                <ShoppingCart className="h-4 w-4" aria-hidden="true" />
+                <span className="hidden md:inline md:ml-1.5">Thêm</span>
               </>
             )}
           </Button>

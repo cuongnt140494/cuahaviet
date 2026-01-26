@@ -261,24 +261,24 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <div className="min-h-screen bg-background">
         {/* Breadcrumb */}
       <div className="border-b bg-muted/30">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
+        <div className="container mx-auto px-4 py-3 md:py-4">
+          <nav className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm" aria-label="Breadcrumb">
+            <Link href="/" className="text-muted-foreground hover:text-primary transition-colors shrink-0">
               Trang chủ
             </Link>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
-            <Link href="/san-pham" className="text-muted-foreground hover:text-primary transition-colors">
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 text-muted-foreground shrink-0" aria-hidden="true" />
+            <Link href="/san-pham" className="text-muted-foreground hover:text-primary transition-colors hidden sm:inline">
               Sản phẩm
             </Link>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 text-muted-foreground shrink-0 hidden sm:block" aria-hidden="true" />
             <Link
               href={`/san-pham?category=${product.category}`}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors hidden md:inline"
             >
               {categoryLabels[product.category]}
             </Link>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
-            <span className="text-foreground font-medium truncate max-w-[200px]">{product.name}</span>
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 text-muted-foreground shrink-0 hidden md:block" aria-hidden="true" />
+            <span className="text-foreground font-medium truncate max-w-[180px] sm:max-w-[250px] md:max-w-[300px]">{product.name}</span>
           </nav>
         </div>
       </div>

@@ -127,16 +127,18 @@ export function ProductsContent() {
 
         <div className="container mx-auto px-4 py-16 relative z-10">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">
+          <nav className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm text-white/70 mb-6 md:mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white transition-colors shrink-0">
               Trang chủ
             </Link>
-            <ChevronRight className="h-4 w-4" />
-            <span className="text-white">Sản phẩm</span>
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 shrink-0" aria-hidden="true" />
+            <Link href="/san-pham" className={`hover:text-white transition-colors ${selectedCategory ? 'hidden sm:inline' : 'text-white'}`}>
+              Sản phẩm
+            </Link>
             {selectedCategory && (
               <>
-                <ChevronRight className="h-4 w-4" />
-                <span className="text-white">{categoryLabels[selectedCategory]}</span>
+                <ChevronRight className="h-3 w-3 md:h-4 md:w-4 shrink-0 hidden sm:block" aria-hidden="true" />
+                <span className="text-white truncate max-w-[150px] sm:max-w-none">{categoryLabels[selectedCategory]}</span>
               </>
             )}
           </nav>

@@ -116,12 +116,12 @@ export default async function PostDetailPage({
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
         <div className="container mx-auto px-4 py-12 lg:py-16 relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Trang chủ</Link>
-            <ChevronRight className="h-4 w-4" />
-            <Link href="/bai-viet" className="hover:text-white transition-colors">Bài viết</Link>
-            <ChevronRight className="h-4 w-4" />
-            <span className="text-white line-clamp-1">{post.title}</span>
+          <nav className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm text-white/70 mb-4 md:mb-6" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white transition-colors shrink-0">Trang chủ</Link>
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 shrink-0" aria-hidden="true" />
+            <Link href="/bai-viet" className="hover:text-white transition-colors hidden sm:inline">Bài viết</Link>
+            <ChevronRight className="h-3 w-3 md:h-4 md:w-4 shrink-0 hidden sm:block" aria-hidden="true" />
+            <span className="text-white truncate max-w-[200px] sm:max-w-[300px]">{post.title}</span>
           </nav>
 
           <div className="max-w-3xl">
