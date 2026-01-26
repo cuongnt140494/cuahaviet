@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
 import { products } from "@/data/products";
 import { categoryLabels } from "@/types";
 import { searchMatch } from "@/lib/utils";
@@ -58,7 +57,7 @@ export function SearchBar({ onClose }: SearchBarProps) {
   };
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-md">
+    <div ref={containerRef} className="relative w-full">
       <div className="relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -70,18 +69,18 @@ export function SearchBar({ onClose }: SearchBarProps) {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
         >
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21-4.3-4.3" />
         </svg>
-        <Input
+        <input
           type="search"
-          placeholder="Tìm kiếm sản phẩm..."
+          placeholder="Tìm kiếm cửa cuốn, motor, phụ kiện..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="pl-10 pr-4"
           onFocus={() => query.trim().length >= 2 && setIsOpen(true)}
+          className="w-full h-11 pl-11 pr-4 rounded-xl border-2 border-border bg-muted/30 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:bg-background transition-all"
         />
       </div>
 

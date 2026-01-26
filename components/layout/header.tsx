@@ -161,14 +161,7 @@ export function Header() {
 
               {/* Desktop Search */}
               <div className="hidden lg:flex flex-1 justify-center max-w-lg mx-4">
-                <div className="relative w-full">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <input
-                    type="search"
-                    placeholder="Tìm kiếm cửa cuốn, motor, phụ kiện..."
-                    className="w-full h-11 pl-11 pr-4 rounded-xl border-2 border-border bg-muted/30 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:bg-background transition-all"
-                  />
-                </div>
+                <SearchBar />
               </div>
 
               {/* Desktop Navigation */}
@@ -257,15 +250,8 @@ export function Header() {
             </div>
 
             {/* Mobile Search */}
-            <div className={`lg:hidden overflow-hidden transition-all duration-300 ${searchOpen ? "max-h-20 pb-4" : "max-h-0"}`}>
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <input
-                  type="search"
-                  placeholder="Tìm kiếm sản phẩm..."
-                  className="w-full h-11 pl-11 pr-4 rounded-xl border-2 border-border bg-muted/30 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:bg-background transition-all"
-                />
-              </div>
+            <div className={`lg:hidden overflow-hidden transition-all duration-300 ${searchOpen ? "max-h-24 pb-4" : "max-h-0"}`}>
+              <SearchBar onClose={() => setSearchOpen(false)} />
             </div>
           </div>
         </div>
