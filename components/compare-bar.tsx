@@ -19,8 +19,65 @@ export function CompareBar() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-2xl animate-in slide-in-from-bottom duration-300">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between gap-4">
+      <div className="container mx-auto px-3 md:px-4 py-3 md:py-4">
+        {/* Mobile Layout */}
+        <div className="flex md:hidden flex-col gap-3">
+          {/* Header Row */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10">
+                <Scale className="h-4 w-4" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold">So sánh ({items.length}/3)</p>
+              </div>
+            </div>
+            <button
+              onClick={clearAll}
+              className="p-2 rounded-lg hover:bg-white/10 text-white/60 hover:text-white transition-colors"
+              aria-label="Xóa tất cả sản phẩm so sánh"
+            >
+              <Trash2 className="h-4 w-4" aria-hidden="true" />
+            </button>
+          </div>
+
+          {/* Products Row - Scrollable */}
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide -mx-3 px-3">
+            {items.map((product) => (
+              <div
+                key={product.id}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1.5 shrink-0"
+              >
+                <div className="w-8 h-8 bg-white/10 rounded flex items-center justify-center">
+                  <Package className="h-4 w-4 text-white/50" />
+                </div>
+                <p className="text-xs font-medium truncate max-w-[80px]">{product.name}</p>
+                <button
+                  onClick={() => removeItem(product.id)}
+                  className="p-1 rounded hover:bg-white/10 text-white/60 hover:text-white transition-colors"
+                  aria-label={`Xóa ${product.name} khỏi so sánh`}
+                >
+                  <X className="h-3 w-3" aria-hidden="true" />
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Action Button */}
+          <Link href="/so-sanh" className="block">
+            <Button
+              size="sm"
+              disabled={items.length < 2}
+              className="w-full h-9 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white gap-1.5 shadow-lg text-sm"
+            >
+              So sánh ngay
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center justify-between gap-4">
           <div className="flex items-center gap-4 overflow-x-auto scrollbar-hide">
             <div className="flex items-center gap-2 shrink-0">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
@@ -51,8 +108,9 @@ export function CompareBar() {
                 <button
                   onClick={() => removeItem(product.id)}
                   className="p-1.5 rounded-lg hover:bg-white/10 text-white/60 hover:text-white transition-colors"
+                  aria-label={`Xóa ${product.name} khỏi so sánh`}
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-4 w-4" aria-hidden="true" />
                 </button>
               </div>
             ))}
@@ -64,8 +122,9 @@ export function CompareBar() {
               size="sm"
               onClick={clearAll}
               className="text-white/70 hover:text-white hover:bg-white/10 rounded-xl gap-2"
+              aria-label="Xóa tất cả sản phẩm so sánh"
             >
-              <Trash2 className="h-4 w-4" />
+              <Trash2 className="h-4 w-4" aria-hidden="true" />
               <span className="hidden sm:inline">Xóa tất cả</span>
             </Button>
             <Link href="/so-sanh">

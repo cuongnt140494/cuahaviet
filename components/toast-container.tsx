@@ -30,8 +30,9 @@ export function ToastContainer() {
           <button
             onClick={() => removeToast(toast.id)}
             className="p-1.5 rounded-lg hover:bg-white/20 opacity-70 hover:opacity-100 transition-all"
+            aria-label="Đóng thông báo"
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
       ))}

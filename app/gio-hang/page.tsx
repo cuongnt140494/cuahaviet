@@ -206,28 +206,31 @@ export default function CartPage() {
                               <button
                                 onClick={() => removeItem(item.product.id)}
                                 className="h-8 w-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors shrink-0"
+                                aria-label={`Xóa ${item.product.name} khỏi giỏ hàng`}
                               >
-                                <X className="h-5 w-5" />
+                                <X className="h-5 w-5" aria-hidden="true" />
                               </button>
                             </div>
 
                             {/* Quantity & Price */}
                             <div className="flex items-center justify-between mt-4">
                               {/* Quantity Selector */}
-                              <div className="flex items-center bg-muted rounded-full">
+                              <div className="flex items-center bg-muted rounded-full" role="group" aria-label={`Số lượng ${item.product.name}`}>
                                 <button
                                   onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
                                   className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors disabled:opacity-50"
                                   disabled={item.quantity <= 1}
+                                  aria-label="Giảm số lượng"
                                 >
-                                  <Minus className="h-4 w-4" />
+                                  <Minus className="h-4 w-4" aria-hidden="true" />
                                 </button>
-                                <span className="w-10 text-center font-bold">{item.quantity}</span>
+                                <span className="w-10 text-center font-bold" aria-live="polite">{item.quantity}</span>
                                 <button
                                   onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
                                   className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors"
+                                  aria-label="Tăng số lượng"
                                 >
-                                  <Plus className="h-4 w-4" />
+                                  <Plus className="h-4 w-4" aria-hidden="true" />
                                 </button>
                               </div>
 

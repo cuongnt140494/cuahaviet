@@ -87,27 +87,29 @@ export function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
 
-        {/* Action Buttons */}
-        <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        {/* Action Buttons - Always visible on mobile */}
+        <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">
           {/* Compare Button */}
           <button
             onClick={handleToggleCompare}
-            className={`p-2.5 rounded-xl transition-all duration-200 shadow-lg ${
+            className={`p-2 md:p-2.5 rounded-xl transition-all duration-200 shadow-lg ${
               inCompare
                 ? "bg-primary text-white"
                 : "bg-white/90 backdrop-blur-sm hover:bg-white text-slate-600 hover:text-primary"
             }`}
             title={inCompare ? "Bỏ so sánh" : "Thêm so sánh"}
+            aria-label={inCompare ? "Bỏ so sánh" : "Thêm so sánh"}
           >
-            <BarChart3 className="h-4 w-4" />
+            <BarChart3 className="h-4 w-4" aria-hidden="true" />
           </button>
           {/* Quick View Button */}
           <button
             onClick={handleQuickView}
-            className="p-2.5 rounded-xl bg-white/90 backdrop-blur-sm hover:bg-white text-slate-600 hover:text-primary transition-all duration-200 shadow-lg"
+            className="p-2 md:p-2.5 rounded-xl bg-white/90 backdrop-blur-sm hover:bg-white text-slate-600 hover:text-primary transition-all duration-200 shadow-lg"
             title="Xem nhanh"
+            aria-label="Xem nhanh"
           >
-            <Eye className="h-4 w-4" />
+            <Eye className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
 
@@ -119,42 +121,42 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       </div>
 
-      <CardContent className="p-5">
+      <CardContent className="p-3 md:p-5">
         {/* Series */}
-        <Badge variant="outline" className="mb-3 rounded-full text-xs">
+        <Badge variant="outline" className="mb-2 md:mb-3 rounded-full text-[10px] md:text-xs">
           {seriesLabels[product.series]}
         </Badge>
 
         {/* Title */}
         <Link href={`/san-pham/${product.slug}`}>
-          <h3 className="font-bold text-base line-clamp-2 group-hover:text-primary transition-colors mb-2 min-h-[2.5rem]">
+          <h3 className="font-bold text-sm md:text-base line-clamp-2 group-hover:text-primary transition-colors mb-1 md:mb-2 min-h-[2.25rem] md:min-h-[2.5rem]">
             {product.name}
           </h3>
         </Link>
 
-        {/* Description */}
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-4 min-h-[2.5rem]">
+        {/* Description - Hidden on mobile */}
+        <p className="hidden md:block text-sm text-muted-foreground line-clamp-2 mb-4 min-h-[2.5rem]">
           {product.description}
         </p>
 
         {/* Price & Action */}
-        <div className="flex items-end justify-between gap-3">
-          <div className="space-y-1">
+        <div className="flex items-end justify-between gap-2 md:gap-3">
+          <div className="space-y-0.5 md:space-y-1 min-w-0">
             {hasDiscount ? (
               <>
-                <p className="text-lg font-bold text-primary">
+                <p className="text-sm md:text-lg font-bold text-primary truncate">
                   {formatPrice(product.wholesalePrice!)}
                 </p>
-                <p className="text-sm text-muted-foreground line-through">
+                <p className="text-xs md:text-sm text-muted-foreground line-through truncate">
                   {formatPrice(product.price)}
                 </p>
               </>
             ) : (
-              <p className="text-lg font-bold text-primary">
+              <p className="text-sm md:text-lg font-bold text-primary truncate">
                 {formatPrice(product.price)}
               </p>
             )}
-            <p className="text-xs text-muted-foreground">
+            <p className="text-[10px] md:text-xs text-muted-foreground">
               /{product.unit}
             </p>
           </div>
@@ -164,17 +166,17 @@ export function ProductCard({ product }: ProductCardProps) {
             variant={inCart ? "secondary" : "default"}
             disabled={!product.inStock}
             onClick={handleAddToCart}
-            className="rounded-xl gap-1.5 h-10 px-4"
+            className="rounded-lg md:rounded-xl gap-1 md:gap-1.5 h-8 md:h-10 px-2 md:px-4 text-xs md:text-sm shrink-0"
           >
             {inCart ? (
               <>
-                <Check className="h-4 w-4" />
-                Đã thêm
+                <Check className="h-3.5 w-3.5 md:h-4 md:w-4" />
+                <span className="hidden sm:inline">Đã thêm</span>
               </>
             ) : (
               <>
-                <ShoppingCart className="h-4 w-4" />
-                Thêm
+                <ShoppingCart className="h-3.5 w-3.5 md:h-4 md:w-4" />
+                <span className="hidden sm:inline">Thêm</span>
               </>
             )}
           </Button>

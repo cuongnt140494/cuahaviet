@@ -104,20 +104,23 @@ export function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                   <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                     className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                    <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
+                     className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                     aria-label="Facebook">
+                    <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                   </a>
-                  <a href="https://zalo.me" target="_blank" rel="noopener noreferrer"
-                     className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                    <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 48 48">
+                  <a href="https://zalo.me/0919086272" target="_blank" rel="noopener noreferrer"
+                     className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                     aria-label="Zalo">
+                    <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 48 48" aria-hidden="true">
                       <path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4zm-2.5 26.5h-5v-5h5v5zm0-7h-5v-8h5v8zm9 7h-5v-5h5v5zm0-7h-5v-8h5v8z"/>
                     </svg>
                   </a>
                   <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
-                     className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                    <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
+                     className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                     aria-label="YouTube">
+                    <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                   </a>
@@ -135,6 +138,7 @@ export function Header() {
               <button
                 className="flex xl:hidden h-11 w-11 items-center justify-center rounded-xl border-2 border-border hover:border-primary hover:bg-primary/5 transition-all"
                 onClick={() => setDrawerOpen(true)}
+                aria-label="Mở menu"
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -231,20 +235,21 @@ export function Header() {
                 <button
                   className="flex lg:hidden h-11 w-11 items-center justify-center rounded-xl border-2 border-border hover:border-primary hover:bg-primary/5 transition-all"
                   onClick={() => setSearchOpen(!searchOpen)}
+                  aria-label="Tìm kiếm"
                 >
                   <Search className="h-5 w-5" />
                 </button>
 
                 {/* Cart */}
-                <Link href="/gio-hang">
-                  <button className="relative flex h-11 w-11 items-center justify-center rounded-xl border-2 border-border hover:border-primary hover:bg-primary/5 transition-all">
+                <Link href="/gio-hang" aria-label={`Giỏ hàng${cartTotal > 0 ? ` (${cartTotal} sản phẩm)` : ''}`}>
+                  <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border-2 border-border hover:border-primary hover:bg-primary/5 transition-all">
                     <ShoppingCart className="h-5 w-5" />
                     {cartTotal > 0 && (
-                      <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-[10px] font-bold text-white shadow-lg">
+                      <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-[10px] font-bold text-white shadow-lg" aria-hidden="true">
                         {cartTotal}
                       </span>
                     )}
-                  </button>
+                  </span>
                 </Link>
               </div>
             </div>
@@ -285,6 +290,7 @@ export function Header() {
           <button
             onClick={closeDrawer}
             className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-colors"
+            aria-label="Đóng menu"
           >
             <X className="h-5 w-5" />
           </button>

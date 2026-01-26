@@ -335,8 +335,9 @@ export function ProductsContent() {
                       <button
                         onClick={() => setSelectedCategory(null)}
                         className="ml-1 hover:bg-primary/20 rounded-full p-0.5"
+                        aria-label={`Xóa bộ lọc ${categoryLabels[selectedCategory]}`}
                       >
-                        <X className="h-3 w-3" />
+                        <X className="h-3 w-3" aria-hidden="true" />
                       </button>
                     </Badge>
                   )}
@@ -346,8 +347,9 @@ export function ProductsContent() {
                       <button
                         onClick={() => setPriceRange([0, 15000000])}
                         className="ml-1 hover:bg-primary/20 rounded-full p-0.5"
+                        aria-label="Xóa bộ lọc khoảng giá"
                       >
-                        <X className="h-3 w-3" />
+                        <X className="h-3 w-3" aria-hidden="true" />
                       </button>
                     </Badge>
                   )}
@@ -357,8 +359,9 @@ export function ProductsContent() {
                       <button
                         onClick={() => setSearchQuery("")}
                         className="ml-1 hover:bg-primary/20 rounded-full p-0.5"
+                        aria-label="Xóa từ khóa tìm kiếm"
                       >
-                        <X className="h-3 w-3" />
+                        <X className="h-3 w-3" aria-hidden="true" />
                       </button>
                     </Badge>
                   )}
@@ -406,8 +409,8 @@ export function ProductsContent() {
           <div className="absolute bottom-0 left-0 right-0 bg-background rounded-t-3xl p-6 max-h-[80vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold">Bộ lọc</h3>
-              <button onClick={() => setShowMobileFilters(false)}>
-                <X className="h-6 w-6" />
+              <button onClick={() => setShowMobileFilters(false)} aria-label="Đóng bộ lọc">
+                <X className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
 

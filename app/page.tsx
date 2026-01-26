@@ -73,13 +73,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Announcement Bar */}
-      <div className="bg-primary text-primary-foreground py-2.5 text-center text-sm">
+      <div className="bg-primary text-primary-foreground py-2 md:py-2.5 text-center text-xs md:text-sm">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2">
-          <Gift className="h-4 w-4" />
-          <span className="font-medium">
-            Chuyên cửa cuốn Austdoor chính hãng tại Hà Nội - Bảo hành lên đến 5 năm
+          <Gift className="h-3.5 w-3.5 md:h-4 md:w-4 shrink-0" />
+          <span className="font-medium line-clamp-1">
+            Chuyên cửa cuốn Austdoor chính hãng - Bảo hành 5 năm
           </span>
-          <Gift className="h-4 w-4" />
+          <Gift className="h-3.5 w-3.5 md:h-4 md:w-4 shrink-0 hidden sm:block" />
         </div>
       </div>
 
@@ -92,66 +92,66 @@ export default function HomePage() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-        <div className="container mx-auto px-4 py-20 lg:py-32 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="text-white space-y-8">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-                <Sparkles className="h-4 w-4 text-yellow-400" />
+        <div className="container mx-auto px-4 py-12 md:py-20 lg:py-32 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="text-white space-y-5 md:space-y-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm">
+                <Sparkles className="h-3.5 w-3.5 md:h-4 md:w-4 text-yellow-400" />
                 <span>Đại lý chính hãng Austdoor #1</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Nâng tầm
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
                   không gian sống
                 </span>
               </h1>
 
-              <p className="text-xl text-white/70 max-w-lg leading-relaxed">
+              <p className="text-base md:text-xl text-white/70 max-w-lg leading-relaxed">
                 Hệ thống cửa cuốn cao cấp Austdoor - Giải pháp an ninh toàn diện
                 với công nghệ tiên tiến từ Nhật Bản.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <Link href="/san-pham">
-                  <Button size="lg" className="w-full sm:w-auto gap-2 text-base px-8 h-14 rounded-full">
+                  <Button size="lg" className="w-full sm:w-auto gap-2 text-sm md:text-base px-6 md:px-8 h-12 md:h-14 rounded-full">
                     Khám phá ngay
-                    <ArrowRight className="h-5 w-5" />
+                    <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                   </Button>
                 </Link>
                 <a href="tel:0919086272">
                   <Button
                     variant="outline"
                     size="lg"
-                    className="w-full sm:w-auto gap-2 text-base px-8 h-14 rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm"
+                    className="w-full sm:w-auto gap-2 text-sm md:text-base px-6 md:px-8 h-12 md:h-14 rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm"
                   >
-                    <Phone className="h-5 w-5" />
-                    Hotline: 0919 086 272
+                    <Phone className="h-4 w-4 md:h-5 md:w-5" />
+                    <span className="hidden sm:inline">Hotline:</span> 0919 086 272
                   </Button>
                 </a>
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center gap-8 pt-4">
+              <div className="flex flex-wrap items-center gap-4 md:gap-8 pt-2 md:pt-4">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-slate-900 flex items-center justify-center text-xs font-bold text-white">
+                      <div key={i} className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-slate-900 flex items-center justify-center text-xs font-bold text-white">
                         {String.fromCharCode(64 + i)}
                       </div>
                     ))}
                   </div>
-                  <div className="text-sm">
+                  <div className="text-xs md:text-sm">
                     <p className="font-semibold">5,000+</p>
-                    <p className="text-white/50">Khách hàng tin dùng</p>
+                    <p className="text-white/50">Khách hàng</p>
                   </div>
                 </div>
-                <div className="h-12 w-px bg-white/20" />
+                <div className="hidden sm:block h-10 md:h-12 w-px bg-white/20" />
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-yellow-400 text-yellow-400" />
                   ))}
-                  <span className="ml-2 text-sm font-medium">4.9/5</span>
+                  <span className="ml-1 md:ml-2 text-xs md:text-sm font-medium">4.9/5</span>
                 </div>
               </div>
             </div>
@@ -219,16 +219,16 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
             {[
-              { icon: Truck, title: "Giao hàng tận nơi", desc: "Khu vực Hà Nội" },
+              { icon: Truck, title: "Giao hàng", desc: "Khu vực Hà Nội" },
               { icon: Shield, title: "Bảo hành 5 năm", desc: "Chính hãng" },
               { icon: Headphones, title: "Tư vấn 24/7", desc: "Hỗ trợ nhiệt tình" },
-              { icon: Clock, title: "Lắp đặt chuyên nghiệp", desc: "Đội ngũ kỹ thuật" },
+              { icon: Clock, title: "Lắp đặt", desc: "Chuyên nghiệp" },
             ].map((item, idx) => (
-              <div key={idx} className="py-6 px-4 flex items-center gap-4 justify-center">
-                <item.icon className="h-8 w-8 text-primary shrink-0" />
+              <div key={idx} className="py-4 md:py-6 px-2 md:px-4 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-center text-center md:text-left">
+                <item.icon className="h-6 w-6 md:h-8 md:w-8 text-primary shrink-0" />
                 <div>
-                  <p className="font-semibold text-sm">{item.title}</p>
-                  <p className="text-xs text-muted-foreground">{item.desc}</p>
+                  <p className="font-semibold text-xs md:text-sm">{item.title}</p>
+                  <p className="text-[10px] md:text-xs text-muted-foreground hidden sm:block">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -237,19 +237,19 @@ export default function HomePage() {
       </section>
 
       {/* Categories Grid - Modern Cards */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex items-end justify-between mb-8 md:mb-12">
             <div>
-              <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">Danh mục sản phẩm</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold">Khám phá bộ sưu tập</h2>
+              <Badge className="mb-2 md:mb-3 bg-primary/10 text-primary hover:bg-primary/10 text-xs">Danh mục sản phẩm</Badge>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Khám phá bộ sưu tập</h2>
             </div>
             <Link href="/san-pham" className="hidden md:flex items-center gap-1 text-primary hover:underline font-medium">
               Xem tất cả <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {[
               {
                 slug: "cua-cuon-tam-lien",
@@ -261,21 +261,21 @@ export default function HomePage() {
               {
                 slug: "cua-cuon-khe-thoang",
                 title: "Cửa cuốn khe thoáng",
-                desc: "Thông thoáng & hiện đại",
+                desc: "Thông thoáng",
                 count: "8 sản phẩm",
                 gradient: "from-emerald-500 to-emerald-600",
               },
               {
                 slug: "motor",
                 title: "Motor cửa cuốn",
-                desc: "Vận hành mượt mà",
+                desc: "Vận hành mượt",
                 count: "20+ sản phẩm",
                 gradient: "from-orange-500 to-orange-600",
               },
               {
                 slug: "phu-kien",
                 title: "Phụ kiện & Lưu điện",
-                desc: "Hoàn thiện hệ thống",
+                desc: "Hoàn thiện",
                 count: "10+ sản phẩm",
                 gradient: "from-purple-500 to-purple-600",
               },
@@ -283,101 +283,119 @@ export default function HomePage() {
               <Link key={cat.slug} href={`/san-pham?category=${cat.slug}`}>
                 <Card className="group h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
                   <CardContent className="p-0">
-                    <div className={`aspect-[4/3] bg-gradient-to-br ${cat.gradient} p-6 flex flex-col justify-end relative overflow-hidden`}>
+                    <div className={`aspect-[4/3] bg-gradient-to-br ${cat.gradient} p-3 md:p-6 flex flex-col justify-end relative overflow-hidden`}>
                       {/* Decorative circles */}
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+                      <div className="absolute top-0 right-0 w-20 md:w-32 h-20 md:h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+                      <div className="absolute bottom-0 left-0 w-16 md:w-24 h-16 md:h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
 
                       <div className="relative z-10">
-                        <Badge variant="secondary" className="mb-2 bg-white/20 text-white border-0 hover:bg-white/30">
+                        <Badge variant="secondary" className="mb-1 md:mb-2 bg-white/20 text-white border-0 hover:bg-white/30 text-[10px] md:text-xs">
                           {cat.count}
                         </Badge>
-                        <h3 className="text-xl font-bold text-white mb-1">{cat.title}</h3>
-                        <p className="text-white/80 text-sm">{cat.desc}</p>
+                        <h3 className="text-sm md:text-xl font-bold text-white mb-0.5 md:mb-1">{cat.title}</h3>
+                        <p className="text-white/80 text-xs md:text-sm hidden sm:block">{cat.desc}</p>
                       </div>
                     </div>
-                    <div className="p-4 flex items-center justify-between bg-card">
-                      <span className="text-sm font-medium">Xem sản phẩm</span>
-                      <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    <div className="p-2.5 md:p-4 flex items-center justify-between bg-card">
+                      <span className="text-xs md:text-sm font-medium">Xem sản phẩm</span>
+                      <ArrowRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                     </div>
                   </CardContent>
                 </Card>
               </Link>
             ))}
           </div>
+
+          {/* Mobile view all link */}
+          <div className="mt-6 text-center md:hidden">
+            <Link href="/san-pham">
+              <Button variant="outline" className="gap-2 rounded-full">
+                Xem tất cả sản phẩm <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 bg-muted/40">
+      <section className="py-12 md:py-20 bg-muted/40">
         <div className="container mx-auto px-4">
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex items-end justify-between mb-6 md:mb-12">
             <div>
-              <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">
+              <Badge className="mb-2 md:mb-3 bg-primary/10 text-primary hover:bg-primary/10 text-xs">
                 <TrendingUp className="h-3 w-3 mr-1" />
                 Bán chạy nhất
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold">Sản phẩm nổi bật</h2>
-              <p className="text-muted-foreground mt-2">Được khách hàng tin tưởng lựa chọn</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Sản phẩm nổi bật</h2>
+              <p className="text-muted-foreground text-sm md:text-base mt-1 md:mt-2">Được khách hàng tin tưởng</p>
             </div>
-            <Link href="/san-pham">
+            <Link href="/san-pham" className="hidden md:block">
               <Button variant="outline" className="gap-2 rounded-full">
                 Xem tất cả <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+
+          {/* Mobile view all */}
+          <div className="mt-6 text-center md:hidden">
+            <Link href="/san-pham">
+              <Button variant="outline" className="gap-2 rounded-full">
+                Xem tất cả <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Promo Banner */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary/80 p-8 md:p-16">
+          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-r from-primary to-primary/80 p-6 md:p-16">
             {/* Decorative */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-white/5 rounded-full translate-y-1/2" />
+            <div className="absolute top-0 right-0 w-40 md:w-64 h-40 md:h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-1/4 w-60 md:w-96 h-60 md:h-96 bg-white/5 rounded-full translate-y-1/2" />
 
-            <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-white">
-                <Badge className="mb-4 bg-white/20 text-white border-0">Ưu đãi đặc biệt</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Giá tốt nhất<br />khu vực Hà Nội
+            <div className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+              <div className="text-white text-center md:text-left">
+                <Badge className="mb-3 md:mb-4 bg-white/20 text-white border-0 text-xs">Ưu đãi đặc biệt</Badge>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
+                  Giá tốt nhất<br className="hidden md:block" /> khu vực Hà Nội
                 </h2>
-                <p className="text-white/80 mb-6 text-lg">
+                <p className="text-white/80 mb-4 md:mb-6 text-sm md:text-lg">
                   Đội ngũ kỹ thuật chuyên nghiệp với hơn 10 năm kinh nghiệm.
-                  Cam kết thi công chuẩn kỹ thuật, bảo hành dài hạn.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
                   <Link href="/san-pham">
-                    <Button variant="secondary" size="lg" className="rounded-full gap-2">
+                    <Button variant="secondary" size="lg" className="w-full sm:w-auto rounded-full gap-2 h-11 md:h-12 text-sm md:text-base">
                       Đặt hàng ngay <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
                   <Link href="/lien-he">
-                    <Button size="lg" className="rounded-full bg-white text-primary hover:bg-white/90">
+                    <Button size="lg" className="w-full sm:w-auto rounded-full bg-white text-primary hover:bg-white/90 h-11 md:h-12 text-sm md:text-base">
                       Tư vấn miễn phí
                     </Button>
                   </Link>
                 </div>
               </div>
 
-              <div className="hidden md:flex justify-center">
-                <div className="grid grid-cols-2 gap-4">
+              {/* Stats - Show on mobile too */}
+              <div className="flex justify-center">
+                <div className="grid grid-cols-2 gap-2 md:gap-4 w-full max-w-sm">
                   {[
                     { value: "10+", label: "Năm kinh nghiệm" },
                     { value: "5000+", label: "Công trình" },
                     { value: "50+", label: "Kỹ thuật viên" },
                     { value: "99%", label: "Hài lòng" },
                   ].map((stat, idx) => (
-                    <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center text-white">
-                      <p className="text-3xl font-bold">{stat.value}</p>
-                      <p className="text-sm text-white/70">{stat.label}</p>
+                    <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-6 text-center text-white">
+                      <p className="text-xl md:text-3xl font-bold">{stat.value}</p>
+                      <p className="text-[10px] md:text-sm text-white/70">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -388,44 +406,44 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us - New Design */}
-      <section className="py-20 bg-muted/40">
+      <section className="py-12 md:py-20 bg-muted/40">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">Tại sao chọn chúng tôi</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Cam kết chất lượng vượt trội</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Cửa Hà Việt tự hào là đại lý phân phối cửa cuốn Austdoor uy tín hàng đầu
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-2 md:mb-3 bg-primary/10 text-primary hover:bg-primary/10 text-xs">Tại sao chọn chúng tôi</Badge>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4">Cam kết chất lượng</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+              Đại lý phân phối cửa cuốn Austdoor uy tín hàng đầu
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 icon: BadgeCheck,
                 title: "100% Chính hãng",
-                desc: "Sản phẩm Austdoor chính hãng với đầy đủ tem, nhãn mác và giấy tờ bảo hành. Không hàng nhái, hàng giả.",
+                desc: "Sản phẩm Austdoor chính hãng với đầy đủ tem, nhãn mác và giấy tờ bảo hành.",
                 highlight: "bg-blue-50 text-blue-600",
               },
               {
                 icon: Shield,
                 title: "Bảo hành 5 năm",
-                desc: "Chính sách bảo hành dài hạn 5 năm cho nan cửa, 2 năm cho motor. Hỗ trợ kỹ thuật trọn đời sản phẩm.",
+                desc: "Chính sách bảo hành dài hạn 5 năm cho nan cửa, 2 năm cho motor.",
                 highlight: "bg-green-50 text-green-600",
               },
               {
                 icon: Truck,
                 title: "Lắp đặt chuyên nghiệp",
-                desc: "Đội ngũ kỹ thuật viên chuyên nghiệp, được đào tạo bài bản. Thi công nhanh, chuẩn kỹ thuật.",
+                desc: "Đội ngũ kỹ thuật viên chuyên nghiệp, thi công nhanh, chuẩn kỹ thuật.",
                 highlight: "bg-orange-50 text-orange-600",
               },
             ].map((feature, idx) => (
               <Card key={idx} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8">
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${feature.highlight} mb-6`}>
-                    <feature.icon className="h-7 w-7" />
+                <CardContent className="p-5 md:p-8">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl ${feature.highlight} mb-4 md:mb-6`}>
+                    <feature.icon className="h-6 w-6 md:h-7 md:w-7" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{feature.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -433,19 +451,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Process Steps - Timeline Style */}
-      <section className="py-20">
+      {/* Process Steps - Mobile Friendly */}
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">Quy trình</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">4 bước đơn giản</h2>
-            <p className="text-muted-foreground">Sở hữu cửa cuốn Austdoor chính hãng nhanh chóng</p>
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-2 md:mb-3 bg-primary/10 text-primary hover:bg-primary/10 text-xs">Quy trình</Badge>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4">4 bước đơn giản</h2>
+            <p className="text-muted-foreground text-sm md:text-base">Sở hữu cửa cuốn Austdoor chính hãng</p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          {/* Mobile: Vertical layout */}
+          <div className="md:hidden space-y-4">
+            {[
+              { step: 1, title: "Liên hệ tư vấn", desc: "Gọi hotline 0919 086 272" },
+              { step: 2, title: "Khảo sát miễn phí", desc: "Đo đạc và báo giá tận nơi" },
+              { step: 3, title: "Xác nhận đơn hàng", desc: "Ký hợp đồng, đặt cọc" },
+              { step: 4, title: "Lắp đặt & Nghiệm thu", desc: "Thi công và bàn giao" },
+            ].map((item) => (
+              <Card key={item.step} className="border-0 shadow-lg">
+                <CardContent className="p-4 flex items-center gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-lg shrink-0">
+                    {item.step}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-base">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Desktop: Timeline layout */}
+          <div className="hidden md:block max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2" />
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2" />
 
               {[
                 { step: 1, title: "Liên hệ tư vấn", desc: "Gọi hotline 0919 086 272 hoặc để lại thông tin, chúng tôi sẽ liên hệ ngay" },
@@ -453,8 +494,8 @@ export default function HomePage() {
                 { step: 3, title: "Xác nhận đơn hàng", desc: "Ký hợp đồng, đặt cọc và xác nhận thời gian thi công" },
                 { step: 4, title: "Lắp đặt & Nghiệm thu", desc: "Thi công chuyên nghiệp, bàn giao và hướng dẫn sử dụng" },
               ].map((item, idx) => (
-                <div key={idx} className={`relative flex items-center gap-8 mb-12 last:mb-0 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                  <div className={`flex-1 ${idx % 2 === 1 ? 'md:text-right' : ''}`}>
+                <div key={idx} className={`relative flex items-center gap-8 mb-12 last:mb-0 ${idx % 2 === 1 ? 'flex-row-reverse' : ''}`}>
+                  <div className={`flex-1 ${idx % 2 === 1 ? 'text-right' : ''}`}>
                     <Card className="inline-block border-0 shadow-lg">
                       <CardContent className="p-6">
                         <h3 className="font-bold text-lg mb-2">{item.title}</h3>
@@ -462,10 +503,10 @@ export default function HomePage() {
                       </CardContent>
                     </Card>
                   </div>
-                  <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground font-bold text-xl shadow-lg">
+                  <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground font-bold text-xl shadow-lg">
                     {item.step}
                   </div>
-                  <div className="flex-1 hidden md:block" />
+                  <div className="flex-1" />
                 </div>
               ))}
             </div>
@@ -474,27 +515,27 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials - Modern Cards */}
-      <section className="py-20 bg-muted/40">
+      <section className="py-12 md:py-20 bg-muted/40">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-2 md:mb-3 bg-primary/10 text-primary hover:bg-primary/10 text-xs">
               <MessageCircle className="h-3 w-3 mr-1" />
               Đánh giá
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Khách hàng nói gì về chúng tôi</h2>
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <span>Đánh giá trung bình</span>
-              <div className="flex items-center gap-1">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Khách hàng nói gì?</h2>
+            <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 text-muted-foreground text-sm">
+              <span className="hidden sm:inline">Đánh giá trung bình</span>
+              <div className="flex items-center gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               <span className="font-semibold text-foreground">4.9/5</span>
-              <span>(500+ đánh giá)</span>
+              <span className="hidden sm:inline">(500+ đánh giá)</span>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 name: "Anh Minh Tuấn",
@@ -516,25 +557,25 @@ export default function HomePage() {
               },
             ].map((testimonial, idx) => (
               <Card key={idx} className="border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex gap-1 mb-4">
+                <CardContent className="p-5 md:p-8">
+                  <div className="flex gap-1 mb-3 md:mb-4">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star
                         key={star}
-                        className={`h-5 w-5 ${star <= testimonial.rating ? 'fill-yellow-400 text-yellow-400' : 'fill-muted text-muted'}`}
+                        className={`h-4 w-4 md:h-5 md:w-5 ${star <= testimonial.rating ? 'fill-yellow-400 text-yellow-400' : 'fill-muted text-muted'}`}
                       />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed text-sm md:text-base line-clamp-4 md:line-clamp-none">
                     "{testimonial.content}"
                   </p>
-                  <div className="flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-lg">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-base md:text-lg shrink-0">
                       {testimonial.name.split(' ').pop()?.charAt(0)}
                     </div>
-                    <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-sm md:text-base truncate">{testimonial.name}</p>
+                      <p className="text-xs md:text-sm text-muted-foreground truncate">{testimonial.role}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -545,29 +586,29 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-2 md:mb-3 bg-primary/10 text-primary hover:bg-primary/10 text-xs">
               <HelpCircle className="h-3 w-3 mr-1" />
               Câu hỏi thường gặp
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">FAQ</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Giải đáp các thắc mắc phổ biến về cửa cuốn Austdoor
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4">FAQ</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+              Giải đáp các thắc mắc phổ biến
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-3 md:space-y-4">
             {homeFAQs.map((faq, idx) => (
               <Card key={idx} className="border-0 shadow-lg">
-                <CardContent className="p-6">
+                <CardContent className="p-4 md:p-6">
                   <details className="group">
                     <summary className="flex items-center justify-between cursor-pointer list-none">
-                      <h3 className="font-semibold text-lg pr-4">{faq.question}</h3>
-                      <ChevronDown className="h-5 w-5 text-muted-foreground shrink-0 transition-transform group-open:rotate-180" />
+                      <h3 className="font-semibold text-sm md:text-lg pr-3 md:pr-4">{faq.question}</h3>
+                      <ChevronDown className="h-4 w-4 md:h-5 md:w-5 text-muted-foreground shrink-0 transition-transform group-open:rotate-180" />
                     </summary>
-                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                    <p className="mt-3 md:mt-4 text-muted-foreground leading-relaxed text-sm md:text-base">
                       {faq.answer}
                     </p>
                   </details>
@@ -589,67 +630,67 @@ export default function HomePage() {
       />
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <Card className="border-0 shadow-2xl overflow-hidden">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
-                <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-8 md:p-12 text-white">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 md:p-12 text-white">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
                     Bạn cần tư vấn?
                   </h2>
-                  <p className="text-white/70 mb-8 text-lg">
-                    Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí và báo giá tốt nhất cho bạn.
+                  <p className="text-white/70 mb-6 md:mb-8 text-sm md:text-lg">
+                    Liên hệ ngay để nhận tư vấn miễn phí và báo giá tốt nhất.
                   </p>
 
-                  <div className="space-y-4">
-                    <a href="tel:0919086272" className="flex items-center gap-4 p-4 rounded-xl bg-white/10 hover:bg-white/20 transition-colors">
-                      <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-                        <Phone className="h-6 w-6" />
+                  <div className="space-y-3 md:space-y-4">
+                    <a href="tel:0919086272" className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-white/10 hover:bg-white/20 transition-colors">
+                      <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                        <Phone className="h-5 w-5 md:h-6 md:w-6" />
                       </div>
                       <div>
-                        <p className="text-sm text-white/60">Hotline</p>
-                        <p className="text-xl font-bold">0919 086 272</p>
+                        <p className="text-xs md:text-sm text-white/60">Hotline</p>
+                        <p className="text-lg md:text-xl font-bold">0919 086 272</p>
                       </div>
                     </a>
 
-                    <a href="https://zalo.me/0123456789" className="flex items-center gap-4 p-4 rounded-xl bg-white/10 hover:bg-white/20 transition-colors">
-                      <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center">
-                        <MessageCircle className="h-6 w-6" />
+                    <a href="https://zalo.me/0919086272" className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-white/10 hover:bg-white/20 transition-colors">
+                      <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-blue-500 flex items-center justify-center shrink-0">
+                        <MessageCircle className="h-5 w-5 md:h-6 md:w-6" />
                       </div>
                       <div>
-                        <p className="text-sm text-white/60">Zalo tư vấn</p>
-                        <p className="text-xl font-bold">Chat ngay</p>
+                        <p className="text-xs md:text-sm text-white/60">Zalo tư vấn</p>
+                        <p className="text-lg md:text-xl font-bold">Chat ngay</p>
                       </div>
                     </a>
                   </div>
                 </div>
 
-                <div className="p-8 md:p-12 bg-card">
-                  <h3 className="text-xl font-bold mb-6">Đăng ký nhận tư vấn</h3>
-                  <form className="space-y-4">
+                <div className="p-6 md:p-12 bg-card">
+                  <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6">Đăng ký nhận tư vấn</h3>
+                  <form className="space-y-3 md:space-y-4">
                     <div>
                       <input
                         type="text"
                         placeholder="Họ và tên *"
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm md:text-base"
                       />
                     </div>
                     <div>
                       <input
                         type="tel"
                         placeholder="Số điện thoại *"
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm md:text-base"
                       />
                     </div>
                     <div>
                       <textarea
                         placeholder="Nội dung cần tư vấn"
                         rows={3}
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none text-sm md:text-base"
                       />
                     </div>
-                    <Button size="lg" className="w-full rounded-lg">
+                    <Button size="lg" className="w-full rounded-lg h-11 md:h-12 text-sm md:text-base">
                       Gửi yêu cầu tư vấn
                       <ArrowRight className="h-4 w-4 ml-2" />
                     </Button>
