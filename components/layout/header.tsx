@@ -254,13 +254,35 @@ export function Header() {
               </div>
             </div>
 
-            {/* Mobile Search */}
-            <div className={`lg:hidden overflow-hidden transition-all duration-300 ${searchOpen ? "max-h-24 pb-4" : "max-h-0"}`}>
-              <SearchBar onClose={() => setSearchOpen(false)} />
-            </div>
           </div>
         </div>
       </header>
+
+      {/* Mobile Search Overlay */}
+      {searchOpen && (
+        <div className="fixed inset-0 z-[80] lg:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setSearchOpen(false)}
+          />
+          {/* Search Container */}
+          <div className="absolute top-0 left-0 right-0 bg-background p-4 shadow-xl animate-in slide-in-from-top duration-200">
+            <div className="flex items-center gap-3">
+              <div className="flex-1">
+                <SearchBar onClose={() => setSearchOpen(false)} />
+              </div>
+              <button
+                onClick={() => setSearchOpen(false)}
+                className="h-11 w-11 flex items-center justify-center rounded-xl border-2 border-border hover:bg-muted transition-colors shrink-0"
+                aria-label="Đóng tìm kiếm"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Mobile Drawer Overlay */}
       <div

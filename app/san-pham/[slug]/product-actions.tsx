@@ -51,30 +51,27 @@ export function ProductActions({ product }: ProductActionsProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {/* Quantity & Add to Cart */}
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex items-center gap-3 md:gap-4">
         {/* Quantity Selector */}
-        <div className="flex items-center">
-          <span className="text-sm font-medium text-muted-foreground mr-4" id="quantity-label-detail">Số lượng:</span>
-          <div className="flex items-center bg-muted rounded-full" role="group" aria-labelledby="quantity-label-detail">
-            <button
-              onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              className="h-12 w-12 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors disabled:opacity-50"
-              disabled={quantity <= 1}
-              aria-label="Giảm số lượng"
-            >
-              <Minus className="h-4 w-4" aria-hidden="true" />
-            </button>
-            <span className="w-12 text-center font-bold text-lg" aria-live="polite">{quantity}</span>
-            <button
-              onClick={() => setQuantity(quantity + 1)}
-              className="h-12 w-12 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors"
-              aria-label="Tăng số lượng"
-            >
-              <Plus className="h-4 w-4" aria-hidden="true" />
-            </button>
-          </div>
+        <div className="flex items-center bg-muted rounded-full shrink-0" role="group" aria-label="Số lượng">
+          <button
+            onClick={() => setQuantity(Math.max(1, quantity - 1))}
+            className="h-10 w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors disabled:opacity-50"
+            disabled={quantity <= 1}
+            aria-label="Giảm số lượng"
+          >
+            <Minus className="h-4 w-4" aria-hidden="true" />
+          </button>
+          <span className="w-8 md:w-12 text-center font-bold text-base md:text-lg" aria-live="polite">{quantity}</span>
+          <button
+            onClick={() => setQuantity(quantity + 1)}
+            className="h-10 w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors"
+            aria-label="Tăng số lượng"
+          >
+            <Plus className="h-4 w-4" aria-hidden="true" />
+          </button>
         </div>
 
         {/* Add to Cart Button */}
@@ -82,7 +79,7 @@ export function ProductActions({ product }: ProductActionsProps) {
           onClick={handleAddToCart}
           disabled={!product.inStock}
           size="lg"
-          className={`flex-1 h-14 rounded-full text-base font-semibold transition-all text-white ${
+          className={`flex-1 h-10 md:h-14 rounded-full text-sm md:text-base font-semibold transition-all text-white ${
             inCart
               ? "bg-green-600 hover:bg-green-700 shadow-lg shadow-green-600/25"
               : "shadow-lg shadow-primary/25"
@@ -90,13 +87,15 @@ export function ProductActions({ product }: ProductActionsProps) {
         >
           {inCart ? (
             <>
-              <Check className="h-5 w-5 mr-2" />
-              Thêm tiếp vào giỏ
+              <Check className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2" />
+              <span className="hidden sm:inline">Thêm tiếp vào giỏ</span>
+              <span className="sm:hidden">Đã thêm</span>
             </>
           ) : (
             <>
-              <ShoppingCart className="h-5 w-5 mr-2" />
-              Thêm vào giỏ hàng
+              <ShoppingCart className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2" />
+              <span className="hidden sm:inline">Thêm vào giỏ hàng</span>
+              <span className="sm:hidden">Thêm giỏ hàng</span>
             </>
           )}
         </Button>
@@ -107,9 +106,9 @@ export function ProductActions({ product }: ProductActionsProps) {
         <Button
           variant="outline"
           size="lg"
-          className="w-full h-14 rounded-full text-base font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+          className="w-full h-10 md:h-14 rounded-full text-sm md:text-base font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
         >
-          <Phone className="h-5 w-5 mr-2" />
+          <Phone className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2" />
           Liên hệ báo giá
         </Button>
       </Link>
