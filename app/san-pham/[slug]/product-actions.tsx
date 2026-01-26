@@ -56,21 +56,23 @@ export function ProductActions({ product }: ProductActionsProps) {
       <div className="flex flex-col sm:flex-row gap-4">
         {/* Quantity Selector */}
         <div className="flex items-center">
-          <span className="text-sm font-medium text-muted-foreground mr-4">Số lượng:</span>
-          <div className="flex items-center bg-muted rounded-full">
+          <span className="text-sm font-medium text-muted-foreground mr-4" id="quantity-label-detail">Số lượng:</span>
+          <div className="flex items-center bg-muted rounded-full" role="group" aria-labelledby="quantity-label-detail">
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               className="h-12 w-12 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors disabled:opacity-50"
               disabled={quantity <= 1}
+              aria-label="Giảm số lượng"
             >
-              <Minus className="h-4 w-4" />
+              <Minus className="h-4 w-4" aria-hidden="true" />
             </button>
-            <span className="w-12 text-center font-bold text-lg">{quantity}</span>
+            <span className="w-12 text-center font-bold text-lg" aria-live="polite">{quantity}</span>
             <button
               onClick={() => setQuantity(quantity + 1)}
               className="h-12 w-12 rounded-full flex items-center justify-center hover:bg-muted-foreground/10 transition-colors"
+              aria-label="Tăng số lượng"
             >
-              <Plus className="h-4 w-4" />
+              <Plus className="h-4 w-4" aria-hidden="true" />
             </button>
           </div>
         </div>

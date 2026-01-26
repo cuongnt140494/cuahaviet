@@ -163,9 +163,12 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
                   ? "border-primary"
                   : "border-transparent hover:border-muted-foreground"
               )}
+              aria-label={`Xem ảnh ${index + 1}`}
+              aria-current={selectedIndex === index ? "true" : undefined}
             >
               <div className="w-full h-full flex items-center justify-center text-muted-foreground">
                 <svg
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -195,6 +198,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
           <button
             className="absolute top-4 right-4 p-2 rounded-full bg-muted hover:bg-muted/80"
             onClick={() => setIsZoomed(false)}
+            aria-label="Đóng xem ảnh"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -206,6 +210,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              aria-hidden="true"
             >
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
@@ -221,6 +226,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
                   handlePrevious();
                 }}
                 className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-muted hover:bg-muted/80"
+                aria-label="Ảnh trước"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -232,6 +238,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  aria-hidden="true"
                 >
                   <path d="m15 18-6-6 6-6" />
                 </svg>
@@ -242,6 +249,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
                   handleNext();
                 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-muted hover:bg-muted/80"
+                aria-label="Ảnh tiếp theo"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -253,6 +261,7 @@ export function ImageGallery({ images, productName }: ImageGalleryProps) {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  aria-hidden="true"
                 >
                   <path d="m9 18 6-6-6-6" />
                 </svg>

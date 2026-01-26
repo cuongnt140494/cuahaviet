@@ -34,8 +34,9 @@ export function ScrollToTop() {
       onClick={scrollToTop}
       size="icon"
       className="fixed bottom-4 left-4 z-50 h-12 w-12 rounded-xl shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 animate-in fade-in zoom-in duration-300"
+      aria-label="Cuộn lên đầu trang"
     >
-      <ChevronUp className="h-5 w-5" />
+      <ChevronUp className="h-5 w-5" aria-hidden="true" />
     </Button>
   );
 }
