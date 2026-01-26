@@ -14,6 +14,7 @@ import {
   WebSiteJsonLd,
 } from "@/components/seo/json-ld";
 import { siteConfig, pageSEO } from "@/lib/seo-config";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -170,6 +171,7 @@ export default function RootLayout({
           <CompareBar />
           <QuickViewWrapper />
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
