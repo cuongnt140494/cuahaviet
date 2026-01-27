@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { categoryLabels } from "@/types";
-import { Phone, Mail, MapPin, Clock, ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Phone, MapPin, Clock, Sparkles } from "lucide-react";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 export function Footer() {
   return (
@@ -23,17 +22,7 @@ export function Footer() {
                 Nhận ngay ưu đãi 5% cho đơn hàng đầu tiên
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row w-full max-w-md gap-2 md:gap-3">
-              <Input
-                type="email"
-                placeholder="Nhập email của bạn"
-                className="h-11 md:h-12 bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:border-primary flex-1"
-              />
-              <Button className="h-11 md:h-12 px-4 md:px-6 rounded-xl gap-2 shrink-0">
-                Đăng ký
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
+            <NewsletterForm />
           </div>
         </div>
       </div>

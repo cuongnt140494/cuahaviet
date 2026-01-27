@@ -18,7 +18,9 @@ import {
   Sparkles,
   ArrowRight,
   Building,
+  AlertCircle,
 } from "lucide-react";
+import { isValidEmail, isValidVietnamesePhone, stripHtml } from "@/lib/utils";
 
 const contactInfo = [
   {
@@ -74,6 +76,13 @@ const showrooms = [
   },
 ];
 
+interface FormErrors {
+  name?: string;
+  phone?: string;
+  email?: string;
+  message?: string;
+}
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -82,12 +91,61 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    // Validate name
+    const cleanName = stripHtml(formData.name.trim());
+    if (!cleanName || cleanName.length < 2) {
+      newErrors.name = "Vui lòng nhập họ tên (ít nhất 2 ký tự)";
+    }
+
+    // Validate phone
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Vui lòng nhập số điện thoại";
+    } else if (!isValidVietnamesePhone(formData.phone)) {
+      newErrors.phone = "Số điện thoại không hợp lệ";
+    }
+
+    // Validate email (optional but must be valid if provided)
+    if (formData.email.trim() && !isValidEmail(formData.email)) {
+      newErrors.email = "Email không hợp lệ";
+    }
+
+    // Validate message
+    const cleanMessage = stripHtml(formData.message.trim());
+    if (!cleanMessage || cleanMessage.length < 10) {
+      newErrors.message = "Vui lòng nhập nội dung (ít nhất 10 ký tự)";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
+
+    // Sanitize data before sending
+    const sanitizedData = {
+      name: stripHtml(formData.name.trim()),
+      phone: formData.phone.trim(),
+      email: formData.email.trim(),
+      subject: formData.subject,
+      message: stripHtml(formData.message.trim()),
+    };
+
+    // Simulate API call (backend not implemented per user request)
+    console.log("Form submitted:", sanitizedData);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setSubmitted(true);
     setIsSubmitting(false);
@@ -96,10 +154,18 @@ export default function ContactPage() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: undefined,
+      }));
+    }
   };
 
   if (submitted) {
@@ -217,8 +283,16 @@ export default function ContactPage() {
                           onChange={handleChange}
                           placeholder="Nguyễn Văn A"
                           required
-                          className="h-12 rounded-xl"
+                          className={`h-12 rounded-xl ${errors.name ? "border-destructive focus-visible:ring-destructive" : ""}`}
+                          aria-invalid={!!errors.name}
+                          aria-describedby={errors.name ? "name-error" : undefined}
                         />
+                        {errors.name && (
+                          <p id="name-error" className="text-sm text-destructive mt-1 flex items-center gap-1">
+                            <AlertCircle className="h-3 w-3" />
+                            {errors.name}
+                          </p>
+                        )}
                       </div>
                       <div>
                         <label className="text-sm font-medium mb-2 block">
@@ -231,8 +305,16 @@ export default function ContactPage() {
                           onChange={handleChange}
                           placeholder="0912 345 678"
                           required
-                          className="h-12 rounded-xl"
+                          className={`h-12 rounded-xl ${errors.phone ? "border-destructive focus-visible:ring-destructive" : ""}`}
+                          aria-invalid={!!errors.phone}
+                          aria-describedby={errors.phone ? "phone-error" : undefined}
                         />
+                        {errors.phone && (
+                          <p id="phone-error" className="text-sm text-destructive mt-1 flex items-center gap-1">
+                            <AlertCircle className="h-3 w-3" />
+                            {errors.phone}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -247,8 +329,16 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="email@example.com"
-                          className="h-12 rounded-xl"
+                          className={`h-12 rounded-xl ${errors.email ? "border-destructive focus-visible:ring-destructive" : ""}`}
+                          aria-invalid={!!errors.email}
+                          aria-describedby={errors.email ? "email-error" : undefined}
                         />
+                        {errors.email && (
+                          <p id="email-error" className="text-sm text-destructive mt-1 flex items-center gap-1">
+                            <AlertCircle className="h-3 w-3" />
+                            {errors.email}
+                          </p>
+                        )}
                       </div>
                       <div>
                         <label className="text-sm font-medium mb-2 block">
@@ -280,8 +370,16 @@ export default function ContactPage() {
                         placeholder="Mô tả chi tiết yêu cầu của bạn..."
                         rows={5}
                         required
-                        className="flex w-full rounded-xl border border-input bg-background px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
+                        className={`flex w-full rounded-xl border border-input bg-background px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none ${errors.message ? "border-destructive focus-visible:ring-destructive" : ""}`}
+                        aria-invalid={!!errors.message}
+                        aria-describedby={errors.message ? "message-error" : undefined}
                       />
+                      {errors.message && (
+                        <p id="message-error" className="text-sm text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="h-3 w-3" />
+                          {errors.message}
+                        </p>
+                      )}
                     </div>
 
                     <Button

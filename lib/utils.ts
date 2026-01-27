@@ -59,3 +59,40 @@ export function searchMatch(text: string, query: string): boolean {
   const normalizedQuery = normalizeSearchText(query);
   return normalizedText.includes(normalizedQuery);
 }
+
+/**
+ * Strip HTML tags from string
+ */
+export function stripHtml(str: string): string {
+  return str.replace(/<[^>]*>/g, '');
+}
+
+/**
+ * Validate Vietnamese phone number
+ * Supports: 0xxxxxxxxx, +84xxxxxxxxx, 84xxxxxxxxx
+ */
+export function isValidVietnamesePhone(phone: string): boolean {
+  const cleaned = phone.replace(/[\s.-]/g, '');
+  const phoneRegex = /^(0|\+84|84)(3|5|7|8|9)[0-9]{8}$/;
+  return phoneRegex.test(cleaned);
+}
+
+/**
+ * Validate email format
+ */
+export function isValidEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+/**
+ * Format Vietnamese phone number for display
+ * 0912345678 -> 0912 345 678
+ */
+export function formatPhoneNumber(phone: string): string {
+  const cleaned = phone.replace(/\D/g, '');
+  if (cleaned.length === 10) {
+    return `${cleaned.slice(0, 4)} ${cleaned.slice(4, 7)} ${cleaned.slice(7)}`;
+  }
+  return phone;
+}

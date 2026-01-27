@@ -1,10 +1,22 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { products } from "@/data/products";
 import { categoryLabels } from "@/types";
 import { searchMatch } from "@/lib/utils";
+
+// Custom debounce hook
+function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedValue(value), delay);
+    return () => clearTimeout(timer);
+  }, [value, delay]);
+
+  return debouncedValue;
+}
 
 interface SearchBarProps {
   onClose?: () => void;
@@ -13,25 +25,28 @@ interface SearchBarProps {
 export function SearchBar({ onClose }: SearchBarProps) {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [results, setResults] = useState<typeof products>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Debounce search query by 300ms
+  const debouncedQuery = useDebounce(query, 300);
+
+  // Memoized search results
+  const results = useMemo(() => {
+    if (debouncedQuery.trim().length < 2) return [];
+
+    return products.filter(
+      (p) =>
+        searchMatch(p.name, debouncedQuery) ||
+        searchMatch(p.description, debouncedQuery) ||
+        searchMatch(categoryLabels[p.category], debouncedQuery) ||
+        searchMatch(p.specifications.model, debouncedQuery)
+    ).slice(0, 5);
+  }, [debouncedQuery]);
+
+  // Update isOpen based on debounced results
   useEffect(() => {
-    if (query.trim().length >= 2) {
-      const filtered = products.filter(
-        (p) =>
-          searchMatch(p.name, query) ||
-          searchMatch(p.description, query) ||
-          searchMatch(categoryLabels[p.category], query) ||
-          searchMatch(p.specifications.model, query)
-      );
-      setResults(filtered.slice(0, 5));
-      setIsOpen(true);
-    } else {
-      setResults([]);
-      setIsOpen(false);
-    }
-  }, [query]);
+    setIsOpen(debouncedQuery.trim().length >= 2);
+  }, [debouncedQuery]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {

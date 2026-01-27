@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 import { useCart } from "@/contexts";
 import { categoryLabels } from "@/types";
+import { PromoCodeForm } from "@/components/promo-code-form";
 import {
   ShoppingCart,
   Trash2,
@@ -18,7 +17,6 @@ import {
   ShoppingBag,
   Truck,
   Shield,
-  Tag,
   CreditCard,
   ChevronRight,
   Package,
@@ -268,23 +266,7 @@ export default function CartPage() {
               <div className="space-y-6">
                 {/* Promo Code */}
                 <Card className="border-0 shadow-lg">
-                  <CardContent className="p-5">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-10 w-10 rounded-xl bg-amber-100 flex items-center justify-center">
-                        <Tag className="h-5 w-5 text-amber-600" />
-                      </div>
-                      <span className="font-semibold">Mã giảm giá</span>
-                    </div>
-                    <div className="flex gap-2">
-                      <Input
-                        placeholder="Nhập mã giảm giá"
-                        className="h-12 rounded-xl border-2 focus:border-primary"
-                      />
-                      <Button variant="outline" className="h-12 px-6 rounded-xl">
-                        Áp dụng
-                      </Button>
-                    </div>
-                  </CardContent>
+                  <PromoCodeForm />
                 </Card>
 
                 {/* Order Summary */}
